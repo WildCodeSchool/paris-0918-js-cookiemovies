@@ -27,13 +27,13 @@ class  Slide_2 extends Component {
     render() {
 
         document.addEventListener('DOMContentLoaded', function () {   
-            var next = document.getElementById('next');
-            var prev = document.getElementById('prev');
-            next.onclick = function () {
-                document.getElementById('contain').scrollLeft += 400;
+            var next_1 = document.getElementById('next_1');
+            var prev_1 = document.getElementById('prev_1');
+            next_1.onclick = function () {
+                document.getElementById('contain_1').scrollLeft += 400;
             };
-            prev.onclick = function () {
-                document.getElementById('contain').scrollLeft -= 400;
+            prev_1.onclick = function () {
+                document.getElementById('contain_1').scrollLeft -= 400;
             };
         }, false);
        
@@ -41,12 +41,12 @@ class  Slide_2 extends Component {
         <div className="contain" >
         <h2>Prochainement</h2>
         <div class="group1-Wrapper">
-            <a class="arrow arrow-prev" id = "prev" >
-                <img  className="gauche" src={fleche_g} alt=""/></a>           
-            <a class="arrow arrow-next" id = "next" >    
-                <img className="droite" src={fleche_d} alt=""/></a>
+            <a class="arrow arrow-prev" id = "prev_1" >
+                <img  className="gauche_1" src={fleche_g} alt=""/></a>           
+            <a class="arrow arrow-next" id = "next_1" >    
+                <img className="droite_1" src={fleche_d} alt=""/></a>
         </div>    
-        <div className="row"id="contain">
+        <div className="row"id="contain_1">
                 {this.state.results.map((element, id) => 
                 
                     <Slide1 title = {element.title} 

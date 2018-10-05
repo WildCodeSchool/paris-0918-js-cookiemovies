@@ -37,21 +37,15 @@ class  Slide_1 extends Component {
             };
         }, false);
 
-
-        
-
-
-
-
-       
+   
    return(
         <div className="contain" >
         <h2>En Salle</h2>
         <div class="group1-Wrapper">
             <a class="arrow arrow-prev" id = "prev" >
-                <img  className="gauche" src={fleche_g} alt=""/></a>           
+                <img  className="gauche" src={fleche_g} /></a>           
             <a class="arrow arrow-next" id = "next" >    
-                <img className="droite" src={fleche_d} alt=""/></a>
+                <img className="droite" src={fleche_d} /></a>
         </div>    
         <div className="row"id="contain">
                 {this.state.results.map((element, id) => 

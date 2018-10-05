@@ -11,25 +11,27 @@ class Slide1 extends React.Component{
         super(props);
         this.state = {
           on: props.on,
-          white: props.white
+          white: props.white,
+          unchecked : props.unchecked
         };
       }
       
-      handleClick = () => {
+      handClick = () => {
         this.setState({ on: !this.state.on });
       };
       handleClick_1 = () => {
         this.setState({ white: !this.state.white });
       };
+      handleClick_2 = () => {
+          this.setState({ unchecked: !this.state.unchecked})
+      } 
 
     render(){
         const image_key ="https://image.tmdb.org/t/p/w500";
+        
         const showIcon = this.state.on ? 'on' : 'off';
-        const clo_coul = this.state.on ? 'white' : 'yellow';
-
-
-     
-
+        const boutonClo = this.state.white ? 'white' : 'yellow';
+        const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
 
         return(
                        
@@ -37,25 +39,26 @@ class Slide1 extends React.Component{
                     
                         <div className="tile">
                         <div className="coul">
-                            
-                            
+                                                     
                             <a class="ajout" id = "ajout" >
-                            <button onClick={this.handleClick} className={showIcon} className="boutonAjout"></button>
+                            <button onClick={this.handClick} className={showIcon} className="boutonAjout"></button>
                                 <img className="ajout" src={ajout}/>
                                     <figure className={showIcon} >
                                         <img className="cloche" src={cloche}/>
                                         <img className="check" src={check}/>
                                         </figure>
 
-                            <button onClick={this.handleClick_1} className={clo_coul} className="boutonCloche" ></button>
-                                        <figure className={clo_coul}>
-                                             <img className="cloche_coul" src={cloche_coul}/> 
-                                        </figure>
-                                        
-                                       {/* <img className="check_coul" src={check_coul}/> */}
-                                    
-                                        
+                            <button onClick={this.handleClick_1} className={boutonClo} className="boutonCloche" ></button>
+                                <figure className={boutonClo}>
+                                    <img className="cloche_coul" src={cloche_coul}/>
+                                </figure>
+                                
+                            <button onClick={this.handleClick_2} className={boutonChe} className="boutonChecked" ></button>
+                                <figure className={boutonChe}>
+                                    <img className="check_coul" src={check_coul}/>
+                                </figure>
                             </a>
+                        
                         </div>
                             <div className="tile_media">
                                 <img className="tile_img" src={`${image_key}${this.props.image}`} />
