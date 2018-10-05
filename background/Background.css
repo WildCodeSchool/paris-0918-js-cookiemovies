@@ -1,0 +1,13 @@
+img{
+
+    height : 300px;
+    width : 200px;
+    opacity: 0.4;
+   
+  }
+
+.affiche {
+    background-color: black;
+    position: fixed;
+    padding-left: 30px;
+  }
