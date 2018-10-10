@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import Slide_1 from './Slide_1';
-import Slide_2 from './Slide_2';
-import Slide_3 from './Slide_3';
+import SlidesInTheater from './SlidesInTheater';
+import SlidesNotOut from './SlidesNotOut';
+import SlidesOutOfTheater from './SlidesOutOfTheater';
+
 
 class App extends Component {
   render() {
     return (
      <div>
-      <Slide_1 />
-      <Slide_2 />
-      <Slide_3 />
+      <SlidesInTheater />
+      <SlidesNotOut />
+      <SlidesOutOfTheater />
+      
     </div>   
     );
   }
