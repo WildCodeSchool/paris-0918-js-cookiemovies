@@ -5,6 +5,7 @@ import check from './check.png'
 import check_coul from './check-coul.png'
 import cloche from './cloche.png'
 import cloche_coul from './cloche-coul.png' 
+import { element } from 'prop-types';
 
 class Slides extends React.Component{
     constructor(props) {
@@ -13,40 +14,68 @@ class Slides extends React.Component{
           on: props.on,
           white: props.white,
           unchecked : props.unchecked,
-          unAlert : props.unAlert,
-          notSeen : props.notSeen
+    
         };
       }
       
       handClick = () => {
-        this.setState({ on: !this.state.on });
-    
+        this.setState({ on: !this.state.on }); 
+        //localStorage.clear()
+        console.log(localStorage);
+        
+         
       };
+      
       handleClick_1 = () => {
         this.setState({ white: !this.state.white });
-        this.setState({unAlert: !this.state.unAlert});
-        alert = this.props.title
-        console.log(alert);
-        
+  
+        var myMoviesAlert = []
+        myMoviesAlert = JSON.parse(localStorage.getItem('myMoviesAlert'));
+        let add = this.props.id
+
+               if(myMoviesAlert.indexOf(add) === -1 ){
+                myMoviesAlert.push(add);
+                    localStorage.setItem('myMoviesAlert', JSON.stringify(myMoviesAlert));
+                    console.log(localStorage);          
+                }else{
+                    myMoviesAlert.splice(myMoviesAlert.indexOf(add),1)
+                    localStorage.setItem('myMoviesAlert', JSON.stringify(myMoviesAlert));                   
+                    console.log(localStorage);
+                }
+       
+            
         
       };
       handleClick_2 = () => {
-          this.setState({ unchecked: !this.state.unchecked})
-          this.setState({notSeen: !this.state.notSeen});
-          let alreadySeen = this.props.title
-          console.log(alreadySeen);
-          
-          
-      } 
+          this.setState({ unchecked: !this.state.unchecked})  
 
+
+          var myMoviesList = []
+          myMoviesList = JSON.parse(localStorage.getItem('myMoviesList'));
+          let add = this.props.id
+  
+                 if(myMoviesList.indexOf(add) === -1 ){
+                    myMoviesList.push(add);
+                      localStorage.setItem('myMoviesList', JSON.stringify(myMoviesList));
+                      console.log(localStorage);          
+                  }else{
+                    myMoviesList.splice(myMoviesList.indexOf(add),1)
+                      localStorage.setItem('myMoviesList', JSON.stringify(myMoviesList));                   
+                      console.log(localStorage);
+                  }
+          
+
+
+      } 
+      
     render(){
         const image_key ="https://image.tmdb.org/t/p/w500";
         
         const showIcon = this.state.on ? 'on' : 'off';
         const boutonClo = this.state.white ? 'white' : 'yellow';
-        const alert = this.state.unAlert ? 'unAlert' : 'alert';
         const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
-        const seen = this.state.notSeen ? 'notSeen' : 'alreadySeen';
+        
+     
 
         return(
                        
@@ -65,13 +94,13 @@ class Slides extends React.Component{
                                         </figure>
                             
                             
-                                <button onClick={this.handleClick_1} className={boutonClo} className={alert} className="boutonCloche" ></button>
+                                <button onClick={this.handleClick_1} className={boutonClo} id= "alert" className="boutonCloche" ></button>
 
                                 <figure className={boutonClo}>
                                     <img className="cloche_coul" src={cloche_coul}alt=""/>
                                 </figure>
                                 
-                            <button onClick={this.handleClick_2} className={boutonChe} className={seen} className="boutonChecked" ></button>
+                            <button onClick={this.handleClick_2} className={boutonChe}  className="boutonChecked" ></button>
                                 <figure className={boutonChe}>
                                     <img className="check_coul" src={check_coul}alt=""/>
                                 </figure>

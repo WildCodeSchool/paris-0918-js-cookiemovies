@@ -18,13 +18,17 @@ class  Search extends Component {
       const api_key = "api_key=634dd449d69159e1d015a2f0febaaf61"
       const recup_data = await fetch(`https://api.themoviedb.org/3/search/movie?${api_key}&language=en-US&query=${query}&page=1&include_adult=false&language=fr`)
       const api_data = await recup_data.json()
+      
+      
    
 
       this.setState({
           description: api_data.results[0].overview,
           image: api_data.results[0].poster_path,
           title: api_data.results[0].title
+          
       })
+      
           
       }
   

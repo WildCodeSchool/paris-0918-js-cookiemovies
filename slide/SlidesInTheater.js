@@ -23,6 +23,7 @@ class  SlidesInTheater extends Component {
       }
       componentDidMount(){
           this.getDescription();
+          
       }
     render() {
 
@@ -31,7 +32,6 @@ class  SlidesInTheater extends Component {
             var prev = document.getElementById('prev');
             next.onclick = function () {
                 document.getElementById('contain').scrollLeft += 400;
-                console.log('film a voir'); 
             };
             prev.onclick = function () {
                 document.getElementById('contain').scrollLeft -= 400;
@@ -53,7 +53,7 @@ class  SlidesInTheater extends Component {
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 
-                        id={id}
+                        id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)
                     } 
