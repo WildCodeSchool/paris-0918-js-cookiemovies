@@ -1,11 +1,13 @@
 import React from 'react'
-import './Slides.css';
+
 import ajout from './ajout.png'
 import check from './check.png'
 import check_coul from './check-coul.png'
 import cloche from './cloche.png'
 import cloche_coul from './cloche-coul.png' 
-import { element } from 'prop-types';
+import './SlidesInTheater.css';
+import './SlidesNotOut.css';
+import './SlidesOutOfTheater.css';
 
 class Slides extends React.Component{
     constructor(props) {
@@ -19,11 +21,7 @@ class Slides extends React.Component{
       }
       
       handClick = () => {
-        this.setState({ on: !this.state.on }); 
-        //localStorage.clear()
-        console.log(localStorage);
-        
-         
+        this.setState({ on: !this.state.on });                  
       };
       
       handleClick_1 = () => {
@@ -43,8 +41,6 @@ class Slides extends React.Component{
                     console.log(localStorage);
                 }
        
-            
-        
       };
       handleClick_2 = () => {
           this.setState({ unchecked: !this.state.unchecked})  
@@ -63,8 +59,6 @@ class Slides extends React.Component{
                       localStorage.setItem('myMoviesList', JSON.stringify(myMoviesList));                   
                       console.log(localStorage);
                   }
-          
-
 
       } 
       
@@ -74,12 +68,13 @@ class Slides extends React.Component{
         const showIcon = this.state.on ? 'on' : 'off';
         const boutonClo = this.state.white ? 'white' : 'yellow';
         const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
-        
-     
 
         return(
-                       
+            
+               <div className="slides"> 
+                    
                 <div className="row_inner">
+                
                     <p>{this.props.alert}</p>
                         <div className="tile">
                         <div className="coul">
@@ -119,6 +114,8 @@ class Slides extends React.Component{
                         </div>
                    
                 </div>
+                </div> 
+            
 
            
         );

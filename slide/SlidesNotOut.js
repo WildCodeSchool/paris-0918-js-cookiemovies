@@ -1,7 +1,6 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
 import Slides from './Slides'
-import './Slides.css';
 import fleche_g from './fleche_gauche_bl.png'
 import fleche_d from './fleche_droite_bl.png'
 
@@ -38,7 +37,7 @@ class  SlidesNotOut extends Component {
         }, false);
        
    return(
-        <div className="contain" >
+        <div className="contain1" >
         <h2>Prochainement</h2>
         <div className="group1-Wrapper">
             <a className="arrow arrow-prev" id = "prev_1" >

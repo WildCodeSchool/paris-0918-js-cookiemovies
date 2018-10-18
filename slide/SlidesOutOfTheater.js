@@ -1,6 +1,5 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
-import './Slides.css';
 import fleche_g from './fleche_gauche_bl.png'
 import fleche_d from './fleche_droite_bl.png'
 import Slides from './Slides'
@@ -38,7 +37,7 @@ class  SlidesOutOfTheater extends Component {
         }, false);
        
    return(
-        <div className="contain" >
+        <div className="contain2" >
         <h2>Déjà Sortis</h2>
         <div className="group1-Wrapper">
             <a className="arrow arrow-prev" id = "prev_2" >

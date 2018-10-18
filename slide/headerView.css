@@ -1,0 +1,27 @@
+.headerView img{
+   position: absolute;
+   top: 0px;
+   right: 0px;
+    width: 600px;
+    
+  
+}
+.headerView body{
+    margin-bottom: 200px;
+}
+.headerView h1{
+    position: absolute;
+    top: 90px;
+    left:50px;
+    z-index: 20000;
+}
+.headerView .degrade{
+    background: linear-gradient(to right, black,transparent);
+    width: 600px;
+    height: 337px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 10000;
+   
+}

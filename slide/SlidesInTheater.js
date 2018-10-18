@@ -1,9 +1,9 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
 import Slides from './Slides'
-import './Slides.css';
 import fleche_g from './fleche_gauche_bl.png'
 import fleche_d from './fleche_droite_bl.png'
+
 
 class  SlidesInTheater extends Component {
 
@@ -49,7 +49,7 @@ class  SlidesInTheater extends Component {
             <a className="arrow arrow-next" id = "next" >    
                 <img className="droite" src={fleche_d} alt="" /></a>
         </div>    
-        <div className="row"id="contain">
+        <div className="row" id="contain">
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 
