@@ -37,7 +37,7 @@ class  SlidesOutOfTheater extends Component {
         }, false);
        
    return(
-        <div className="contain2" >
+        <div className="contain2" id="moveAll_2">
         <h2>Déjà Sortis</h2>
         <div className="group1-Wrapper">
             <a className="arrow arrow-prev" id = "prev_2" >
@@ -45,7 +45,7 @@ class  SlidesOutOfTheater extends Component {
             <a className="arrow arrow-next" id = "next_2" >    
                 <img className="droite_2" src={fleche_d} alt=""/></a>
         </div>    
-        <div className="row"id="contain_2">
+        <div className="ro"id="contain_2">
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 

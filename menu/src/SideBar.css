@@ -1,0 +1,85 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 36px;
+    top: 36px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #976734;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #412c14;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #976734;
+    font-size: 150%;
+    height: auto !important;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #976734;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: black;
+    padding: 0.8em;
+    padding-top: 20px;
+    
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    margin-top: 30px;
+  }
+   
+  .my-menu  .enSalle a{
+    padding: 35px;
+  }
+
+  .my-menu .menu-proch{
+    color:;
+
+}
+.my-menu .sorti a{
+  padding: 24px;
+}
+.my-menu img {
+  width: 40px;
+  vertical-align:middle;
+  padding: 10px;
+
+}
+
+.my-menu .logo_cookie {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.my-menu .cookie_enSalle {
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color : #412c14;
+}

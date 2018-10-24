@@ -5,6 +5,12 @@ import check from './check.png'
 import check_coul from './check-coul.png'
 import cloche from './cloche.png'
 import cloche_coul from './cloche-coul.png' 
+
+// import './Footer.css';
+// import 'font-awesome/css/font-awesome.min.css';
+// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+// import 'mdbreact/dist/css/mdb.css';
+
 import './SlidesInTheater.css';
 import './SlidesNotOut.css';
 import './SlidesOutOfTheater.css';
@@ -70,10 +76,10 @@ class Slides extends React.Component{
         const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
 
         return(
-            
-               <div className="slides"> 
+          
+               <div className="slides" > 
                     
-                <div className="row_inner">
+                <div className="row_inne">
                 
                     <p>{this.props.alert}</p>
                         <div className="tile">
@@ -107,14 +113,16 @@ class Slides extends React.Component{
                             </div>
                             <div className="tile_details">  
                                 <div className="tile_title">                  
-                                    <p>{this.props.description.substr(0, 140)} ...</p>
-                                    <h4>{this.props.title}</h4>
+                                    <p>{this.props.description.substr(0, 140)} [...]</p>
+                                    <h4>{this.props.title.substr(0, 34)}</h4>
                                 </div>                                            
                             </div>
                         </div>
                    
                 </div>
                 </div> 
+              
+
             
 
            

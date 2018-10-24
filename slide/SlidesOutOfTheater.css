@@ -1,7 +1,9 @@
 body{
     width:100%;
-    background-color: black;
+    background-color: black    ;
     color: white;
+
+
 }
 
 .contain2 h2{
@@ -28,7 +30,7 @@ body{
     position: fixed;
     position : absolute;
     background-color: rgba(0, 0, 0, 0.4);
-    top :1570px;
+    top :1480px;
     right: 0px;
     z-index:40;
     opacity: 0; 
@@ -38,37 +40,37 @@ body{
 }
 .slides .ajout{
     position : absolute;
-    top:12px;
+    top:20px;
     right: 3px;
     width:10%;
 }
 .slides .cloche{
     position : absolute;
-    top:30px;
+    top:38px;
     right: 3px;
     width:10%;
 }
 .slides .cloche_coul{
     position : absolute;
-    top:30px;
+    top:38px;
     right: 3px;
     width:10%;
 }
 .slides .check{
     position : absolute;
-    top:48px;
+    top:56px;
     right: 3px;
     width:10%;
 }
 .slides .check_coul{
     position : absolute;
-    top:48px;
+    top:56px;
     right: 3px;
     width:10%;
 }
 .slides .boutonAjout{
     position : absolute;
-    top:4px;
+    top:20px;
     right: 3px;
     width: 20px;
     height: 20px;
@@ -78,7 +80,7 @@ body{
 }
 .slides .boutonCloche{
     position : absolute;
-    top:28px;
+    top:38px;
     right: 3px;
     width: 20px;
     height: 20px;
@@ -88,7 +90,7 @@ body{
 }
 .slides .boutonChecked{
     position : absolute;
-    top:52px;
+    top:56px;
     right: 3px;
     width: 20px;
     height: 20px;
@@ -116,14 +118,8 @@ body{
 .slides figure.checked .check_coul {
     visibility: hidden;
 }
-    
-.slides .tile_title h4{
-    text-align: center;
-    line-height: 0px;
-    word-break: normal;
-}
 
-.contain2 .row{
+.contain2 .ro{
     display: flex;
     flex-direction: row;
     margin-right: 1px;
@@ -131,7 +127,7 @@ body{
     overflow: scroll;
     scroll-behavior: smooth;
 }
-.slides .row_inner{
+.slides .row_inne{
     transition: 450ms -webkit-transform;
     transition: 450ms transform;
     transition: 450ms transform, 450ms -webkit-transform;
@@ -143,14 +139,14 @@ body{
     display: inline-block;
     width: 160px;
     height: 250px;
-    margin-right: 15px;
+    margin-right: 13px;
     cursor: pointer;
     transition: 450ms all;
     -webkit-transform-origin: center left;
             transform-origin: center left;
     font-size: 8px;
     font-weight: bold;
-    opacity: 0.4;
+    opacity: 0.7;
 
   }
   .slides .tile_img {
@@ -212,7 +208,7 @@ body{
 .slides .tile:hover .tile_details {
   opacity: 1;
 }
-.slides .row_inner:hover {
+.slides .row_inne:hover {
   -webkit-transform: translate3d(-66.5px, 0, 0);
           transform: translate3d(-66.5px, 0, 0);
           z-index: 10000;
@@ -221,7 +217,7 @@ body{
 .slides .contain2 :hover .tile {
     opacity: 1;
 }
-.slides .row_inner:hover .tile:hover {
+.slides .row_inne:hover .tile:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
           opacity: 1;

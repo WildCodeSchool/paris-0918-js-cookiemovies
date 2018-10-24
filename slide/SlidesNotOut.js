@@ -37,7 +37,7 @@ class  SlidesNotOut extends Component {
         }, false);
        
    return(
-        <div className="contain1" >
+        <div className="contain1" id="moveAll_1">
         <h2>Prochainement</h2>
         <div className="group1-Wrapper">
             <a className="arrow arrow-prev" id = "prev_1" >
@@ -45,7 +45,7 @@ class  SlidesNotOut extends Component {
             <a className="arrow arrow-next" id = "next_1" >    
                 <img className="droite_1" src={fleche_d} alt=""/></a>
         </div>    
-        <div className="row"id="contain_1">
+        <div className="ro"id="contain_1">
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 

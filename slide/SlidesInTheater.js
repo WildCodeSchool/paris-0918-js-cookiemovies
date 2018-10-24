@@ -1,14 +1,17 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
+import { elastic as Menu } from 'react-burger-menu'
 import Slides from './Slides'
 import fleche_g from './fleche_gauche_bl.png'
 import fleche_d from './fleche_droite_bl.png'
+import TheaterOnly from './TheaterOnly'
 
 
 class  SlidesInTheater extends Component {
 
     state = {
         results :[]
+       
     }
 
   getDescription = async () => {
@@ -19,6 +22,7 @@ class  SlidesInTheater extends Component {
 
       this.setState({
           results : api_data.results
+          
       })   
       }
       componentDidMount(){
@@ -41,7 +45,10 @@ class  SlidesInTheater extends Component {
 
    
    return(
-        <div className="contain" >
+    
+
+    
+        <div className="contain" id="moveAll">
         <h2>En Salle</h2>
         <div className="group1-Wrapper">
             <a className="arrow arrow-prev" id = "prev" >
@@ -49,16 +56,17 @@ class  SlidesInTheater extends Component {
             <a className="arrow arrow-next" id = "next" >    
                 <img className="droite" src={fleche_d} alt="" /></a>
         </div>    
-        <div className="row" id="contain">
+        <div className="ro" id="contain">
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 
                         id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)
-                    } 
+                    }
             </div> 
        </div>
+   
    );
 }
 
