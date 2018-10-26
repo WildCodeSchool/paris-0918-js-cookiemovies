@@ -1,7 +1,7 @@
 img{
 
-    height : 300px;
-    width : 200px;
+    height : 280px;/*tester taille img par pourcentage*/
+    width : 240px;
     opacity: 0.4;
    
   }
@@ -9,5 +9,6 @@ img{
 .affiche {
     background-color: black;
     position: fixed;
-    padding-left: 30px;
+    padding-left :10%;
+   
   }
