@@ -10,139 +10,91 @@ body{
 
 }
 .gauche{
-    cursor: pointer;
-    position: fixed;
     position : absolute;
-    top :195px;
+    top :230px;
     z-index:40;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.4);
  
 }
 .droite{
-    cursor: pointer;
-    position: fixed;
     position : absolute;
     background-color: rgba(0, 0, 0, 0.4);
-    top :195px;
+    top :230px;
     right: 0px;
     z-index:40;
     opacity: 1;
    
 }
-.gauche_1{
-    cursor: pointer;
-    position: fixed;
-    position : absolute;
-    top :635px;
-    z-index:40;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.droite_1{
-    cursor: pointer;
-    position: fixed;
-    position : absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    top :635px;
-    right: 0px;
-    z-index:40;
-    opacity: 1; 
-}
-.gauche_2{
-    cursor: pointer;
-    position: fixed;
-    position : absolute;
-    top :1060px;
-    z-index:40;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.droite_2{
-    cursor: pointer;
-    position: fixed;
-    position : absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    top :1060px;
-    right: 0px;
-    z-index:40;
-    opacity: 1; 
-}
 .ajout{
     position : absolute;
-    top:4px;
+    top:18px;
     right: 3px;
 }
 .cloche{
     position : absolute;
-    top:28px;
+    top:42px;
     right: 3px;
 }
 .cloche_coul{
     position : absolute;
-    top:28px;
+    top:42px;
     right: 3px;
 }
 .check{
     position : absolute;
-    top:52px;
+    top:66px;
     right: 3px;
 }
 .check_coul{
     position : absolute;
-    top:52px;
+    top:66px;
     right: 3px;
 }
 .boutonAjout{
     position : absolute;
-    top:4px;
+    top:18px;
     right: 3px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     z-index: 20;
     opacity:0;
-}
-.boutonCloche{
-    position : absolute;
-    top:28px;
-    right: 3px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity:0;
-    z-index: 20;    
-}
-.boutonChecked{
-    position : absolute;
-    top:52px;
-    right: 3px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity:0;
-    z-index: 20;
 }
 figure.off .cloche{
      visibility: hidden;
 }
-
 figure.off .check{
     visibility: hidden;
 }
-figure.on .cloche_coul{
+.boutonCloche{
+    position : absolute;
+    top:42px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity:0;
+    z-index: 20;  
+}
+.cloche_coul{
     visibility: hidden;
 }
-figure.on .check_coul{
-    visibility: hidden;
+figure.off .cloche_coul{
+    visibility: visible;
 }
 
-figure.yellow .cloche_coul {
-    visibility: hidden;
-}
-figure.checked .check_coul {
-    visibility: hidden;
-}
+
+
+
+
+
+.arrow.arrow-next {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+    }
     
 .tile_title h4{
     text-align: center;
@@ -169,25 +121,24 @@ figure.checked .check_coul {
 .tile {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
     margin-right: 10px;
     cursor: pointer;
     transition: 450ms all;
     -webkit-transform-origin: center left;
             transform-origin: center left;
-    font-size: 8px;
-    font-weight: bold;
+    font-size: 12px;
   }
 .tile_img {
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
     -o-object-fit: cover;
     object-fit: cover;
 }
 .tile_media img{
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
 }
 .tile_details {
     position: absolute;
@@ -232,7 +183,7 @@ a:hover {
 
 } 
 .contain :hover .tile {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .row_inner:hover .tile:hover {
   -webkit-transform: scale(1.5);

@@ -1,16 +1,14 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
-import Slides from './Slides'
+import Slide1 from './Slide1'
+import './Slide.css';
 import fleche_g from './fleche_gauche_bl.png'
 import fleche_d from './fleche_droite_bl.png'
-import TheaterOnly from './NowPlaying'
 
-
-class  SlidesInTheater extends Component {
+class  Slide_1 extends Component {
 
     state = {
         results :[]
-       
     }
 
   getDescription = async () => {
@@ -18,14 +16,13 @@ class  SlidesInTheater extends Component {
       const api_key = "api_key=634dd449d69159e1d015a2f0febaaf61"
       const recup_data = await fetch(`https://api.themoviedb.org/3/movie/now_playing?${api_key}&language=en-FR&page=1&region=FR&language=fr`)
       const api_data = await recup_data.json()
+
       this.setState({
           results : api_data.results
-          
       })   
       }
       componentDidMount(){
           this.getDescription();
-          
       }
     render() {
 
@@ -39,32 +36,33 @@ class  SlidesInTheater extends Component {
                 document.getElementById('contain').scrollLeft -= 400;
             };
         }, false);
+
+
         
 
-   
-   return(
-    
 
-    
-        <div className="contain" id="moveAll">
+
+
+       
+   return(
+        <div className="contain" >
         <h2>En Salle</h2>
-        <div className="group1-Wrapper">
-            <a className="arrow arrow-prev" id = "prev" >
+        <div class="group1-Wrapper">
+            <a class="arrow arrow-prev" id = "prev" >
                 <img  className="gauche" src={fleche_g} alt=""/></a>           
-            <a className="arrow arrow-next" id = "next" >    
-                <img className="droite" src={fleche_d} alt="" /></a>
+            <a class="arrow arrow-next" id = "next" >    
+                <img className="droite" src={fleche_d} alt=""/></a>
         </div>    
-        <div className="ro" id="contain">
+        <div className="row"id="contain">
                 {this.state.results.map((element, id) => 
                 
-                    <Slides key={element.id} title = {element.title} 
-                        id={element.id}
+                    <Slide1 title = {element.title} 
+                        id={id}
                         image={element.poster_path} 
                         description={element.overview}/>)
-                    }
+                    } 
             </div> 
        </div>
-   
    );
 }
 
@@ -72,4 +70,4 @@ class  SlidesInTheater extends Component {
 
 
 
-export default  SlidesInTheater;
+export default  Slide_1;

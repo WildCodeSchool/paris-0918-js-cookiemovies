@@ -49,7 +49,7 @@ class  SlidesOutOfTheater extends Component {
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 
-                        id={id}
+                        id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)
                     } 

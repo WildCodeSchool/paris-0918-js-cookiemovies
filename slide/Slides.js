@@ -5,6 +5,8 @@ import check from './check.png'
 import check_coul from './check-coul.png'
 import cloche from './cloche.png'
 import cloche_coul from './cloche-coul.png' 
+import ImageNull from './afficheNull.png'
+
 
 // import './Footer.css';
 // import 'font-awesome/css/font-awesome.min.css';
@@ -22,8 +24,17 @@ class Slides extends React.Component{
           on: props.on,
           white: props.white,
           unchecked : props.unchecked,
+          id:undefined
+           
     
         };
+      }
+
+      testIDimage = () =>{
+          this.setState({id : this.props.id})
+          console.log(this.state.id);
+          
+          
       }
       
       handClick = () => {
@@ -31,6 +42,7 @@ class Slides extends React.Component{
       };
       
       handleClick_1 = () => {
+          
         this.setState({ white: !this.state.white });
   
         var myMoviesAlert = []
@@ -65,17 +77,19 @@ class Slides extends React.Component{
                       localStorage.setItem('myMoviesList', JSON.stringify(myMoviesList));                   
                       console.log(localStorage);
                   }
-
       } 
       
     render(){
-        const image_key ="https://image.tmdb.org/t/p/w500";
         
+        const image_key ="https://image.tmdb.org/t/p/w500";
+        const imageSrc = this.props.image ? `${image_key}${this.props.image}` : ImageNull
+ 
         const showIcon = this.state.on ? 'on' : 'off';
         const boutonClo = this.state.white ? 'white' : 'yellow';
         const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
-
-        return(
+        
+        
+        return( 
           
                <div className="slides" > 
                     
@@ -85,8 +99,7 @@ class Slides extends React.Component{
                         <div className="tile">
                         <div className="coul">
                         
-                                                     
-                            
+                                                                                 
                             <button onClick={this.handClick} className={showIcon} className ={alert} className="boutonAjout"></button>
                                 <img className="ajout" src={ajout} alt=""/>
                                     <figure className={showIcon} >
@@ -99,7 +112,7 @@ class Slides extends React.Component{
 
                                 <figure className={boutonClo}>
                                     <img className="cloche_coul" src={cloche_coul}alt=""/>
-                                </figure>
+                                </figure> 
                                 
                             <button onClick={this.handleClick_2} className={boutonChe}  className="boutonChecked" ></button>
                                 <figure className={boutonChe}>
@@ -108,10 +121,10 @@ class Slides extends React.Component{
                            
                         
                         </div>
-                            <div className="tile_media">
-                                <img className="tile_img" src={`${image_key}${this.props.image}`}alt="" />
+                            <div   className="tile_media">
+                                <img   className="tile_img" src={imageSrc}alt="" />
                             </div>
-                            <div className="tile_details">  
+                            <div onClick={this.testIDimage} className="tile_details">  
                                 <div className="tile_title">                  
                                     <p>{this.props.description.substr(0, 140)} [...]</p>
                                     <h4>{this.props.title.substr(0, 34)}</h4>

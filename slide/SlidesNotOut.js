@@ -15,6 +15,8 @@ class  SlidesNotOut extends Component {
       const api_key = "api_key=634dd449d69159e1d015a2f0febaaf61"
       const recup_data = await fetch(`https://api.themoviedb.org/3/movie/upcoming?${api_key}&language=en-FR&page=1&region=FR&language=fr`)
       const api_data = await recup_data.json()
+      console.log(api_data);
+      
 
       this.setState({
           results : api_data.results
@@ -49,7 +51,7 @@ class  SlidesNotOut extends Component {
                 {this.state.results.map((element, id) => 
                 
                     <Slides key={element.id} title = {element.title} 
-                        id={id}
+                        id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)
                     } 
