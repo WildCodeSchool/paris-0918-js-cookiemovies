@@ -4,8 +4,8 @@ import './Affiche.css';
 
 class Affiche extends Component {
   state = {
-    test: [] /* creation tableau vide pour pouvoir afficher les objets(img) dans le composant*/,
-    test_2: [],
+    tabStream: [] /* creation tableau vide pour pouvoir afficher les objets(img) dans le composant*/,
+    tabStream_2: [],
   };
 
   getAffiche = async () => {
@@ -24,8 +24,9 @@ class Affiche extends Component {
     console.log(api_data);
 
     this.setState({
-      test: api_data.results /*insere, stocks les donnees dans un tableau*/,
-      test_2:
+      tabStream:
+        api_data.results /*insere, stocks les donnees dans un tableau*/,
+      tabStream_2:
         api_data_2.results /* stock les donnees des 20img sup dans un autre tableau*/,
     });
   };
@@ -37,14 +38,16 @@ class Affiche extends Component {
   render() {
     return (
       <div className="backimg">
-        <div className="test1">
-          {this.state.test.map(
+        <div className="tabStream1">
+          {this.state.tabStream.map(
             element => (
               <ImageBack image={element.poster_path} />
             ) /*appel du composant ImageBack pour afficher l'adresse url api du debut*/,
           )}
-          {this.state.test_2.map(element => (
-            <ImageBack image={element.poster_path} />
+          {this.state.tabStream_2.map(element => (
+            <ImageBack
+              image={element.poster_path}
+            /> /*suite des images deuxieme page pour appel du composant ImageBack pour afficher l'adresse url api du debut*/
           ))}
         </div>
       </div>

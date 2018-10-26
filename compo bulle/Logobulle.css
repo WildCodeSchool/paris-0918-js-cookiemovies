@@ -1,14 +1,16 @@
 *{
-    background-color : grey;
+    background-color : black;
 }
 
-.bubble{
+.bubbleStream{
 
 
-    background: #FFFAF0;
-    border-radius: 50%;
-    height: 80px;
-    width: 120px;
-    margin: 0;
+
+  
+    margin : 1%;
+    height: 50px;
+    width: 55px;
+    
 }
 
+a { text-decoration: none; color: #423D3C;  }

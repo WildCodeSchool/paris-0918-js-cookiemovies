@@ -1,45 +1,43 @@
-*{
+*{ /*initialise tout la page index et les autres a 0*/
     padding: 0;
     margin: 0;
 }
-.test1 
+.tabStream1 /*alignement des affiches */
 
     {
         display: flex;
         flex-wrap : wrap;
-        /* padding-left: 70px; */
         align-items:flex-start; 
-        /* background-color: black; */
         background-color: transparent;
         position: fixed;
         width: 100%;
         left: 0.46%;
      }
  
-     img{
+     img{ /*taille des images affiches*/
 
         height : 300px;
         width : 230px;
         opacity: 0.4;
        
       }
-.backimg {
+.backimg { /*background noir et taille */
     width: 100%;
     height: 100vh;
     background-color : #0c0c0c;
 }
 
 
-
+/* background responsive pour pas avoir des marges noires sur les cotes*/
 @media screen and (max-width: 2285px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         
     }
 }
 
 @media screen and (max-width: 1500px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 2%;
     }
@@ -47,7 +45,7 @@
 
 
 @media screen and (max-width: 1040px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 20%;
     }
@@ -56,14 +54,14 @@
 
 
 @media screen and (max-width: 1024px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 5%;
     }
 }
 
 @media screen and (max-width: 500px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 23%;
     }
@@ -71,7 +69,7 @@
 
 
 @media screen and (max-width: 400px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 20%;
     }
@@ -79,7 +77,7 @@
 
 
 @media screen and (max-width: 320px){
-    .test1 {
+    .tabStream1 {
         position: fixed;
         left : 15%;
     }
