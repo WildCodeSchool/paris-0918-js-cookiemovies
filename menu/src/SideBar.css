@@ -6,33 +6,44 @@
     left: 36px;
     top: 36px;
   }
+  body{
+background-color: black;
+  }
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #976734;
+    /* background: #976734; */
+    background-image: -moz-linear-gradient((pink, violet,blue))
   }
   
-  /* Position and sizing of clickable cross button */
+  /* Position and sizing of clickable cross button
   .bm-cross-button {
     height: 24px;
     width: 24px;
   }
   
   /* Color/shape of close button cross */
-  .bm-cross {
-    background: #412c14;
-  }
+  /* .bm-cross {
+    background: #412c14; */
+  
   
   /* General sidebar styles */
   .bm-menu {
-    background: #976734;
+    /* background: #976734; */
     font-size: 150%;
     height: auto !important;
+    width: 100%,
   }
   
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
-    fill: #976734;
+    fill: #7e2676;
+    opacity: 0;
+  }
+  .bm-menu-wrap {
+    background-image: url("./images/degrade2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   /* Wrapper for item list */
@@ -40,7 +51,7 @@
     color: black;
     padding: 0.8em;
     padding-top: 20px;
-    
+    height: auto;
   }
   
   /* Individual item */
@@ -51,14 +62,37 @@
   }
    
   .my-menu  .enSalle a{
-    padding: 35px;
+    /*padding: 35px;*/
+  }
+  .my-menu .enSalle{
+      display: flex;
+      flex-direction: row;
+  }
+   .my-menu .enSalle .cloche{
+      width: 35px;
+  }
+.my-menu .enSalle .cloche{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+  .my-menu .enSalle p{
+      color :black;
+      font-size: 15px;
+      margin-top: -1px;
+       
+  }
+  .my-menu .enSalle .borderCercle{
+    
+    width: 20px;
+    height: 20px;
+    background: rgb(155, 16, 173);
+    border-radius: 50%;
+    border:2px solid white;
+  
   }
 
-  .my-menu .menu-proch{
-    color:;
-
-}
-.my-menu .sorti a{
+ .my-menu .sorti a{
   padding: 24px;
 }
 .my-menu img {
@@ -81,5 +115,12 @@
 
 a {
   text-decoration: none;
-  color : #412c14;
+  color : white;
 }
+
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
