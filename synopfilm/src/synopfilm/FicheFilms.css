@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+}
+
+p, h1{
+    font-family:'Quicksand';
+}
+
+/* LES TEXTES EN BLANCS */
+.descri, .titleTitre, .date, .descri, .real, .duree, .titreDuree{
+    color: white;
+}
+
+/* ---- AFFICHGENRES.JS ---- */
+.genres{
+    display: inline-block;
+    height: 2em;
+    width: 6em;
+    text-align: center;
+    margin: 1em;
+    line-height: 1px;
+    border-radius: 50px;
+    background-color: white;
+}
+/* ---------------- */
+
+
+/* ---- AFFICHAGESBIS.JS ---- */
+.pageFilm{
+    margin: 10em;
+    /* border: 1px solid white; */
+}
+
+.enTeteFF{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    /* border: 1px solid white;*/
+} 
+.test{
+    display: flex;
+    flex-direction: column;
+}
+/* image de Fond */
+.imageFond{
+    position: absolute;
+    /* opacity: 0.75; */
+    clip:rect(1000px,1000px,1900px,1000px);
+    /* padding-left: 10em; */
+    filter: blur(7px);
+    width: 1000px;
+}
+
+/* affiche du film */
+.affichette{
+    height: 300px;
+    position: relative;
+    padding-left: 5%;
+}
+
+/* titre du film */
+.titleTitre{
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 3em;
+    margin-left: 10em;
+    /* border: 1px solid white; */
+}
+
+/* synopsis */
+.descri{
+    /* height: 10px; */
+    position: relative;
+    margin-top: 3em;
+    text-align: justify;
+    /* border: 1px solid white; */
+}
+
+.containerDateReal{
+    display: flex;
+    justify-content: flex-start;
+    /* border: 1px solid white; */
+    /* padding-left: 25em; */
+}
+/* date */
+.containerDate{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 2em;
+}
+.titreDate{
+    font-family:'Raleway';
+    color: white;
+}
+
+.date{
+}
+
+/* realisateur */
+.containerReal{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 2em;
+}
+.titreReal{
+    font-family:'Raleway';
+    color: white;
+}
+.real{
+    color: white;
+}
+
+/* duree */
+.containerDuree{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 2em;
+}
+.titreDuree{
+    font-family:'Raleway';
+    color: white;
+}
+.duree{
+    color: white;
+}
+/* ---------------- */
+
+/* ---- ACTEURS.JS ---- */
+
+.containerActor{
+    display: inline-block;
+    text-align: center;
+    padding-left: 5em;
+}
+.actorProfile{
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+.actorName{
+    visibility: hidden;
+    color: white;
+    
+}
+.actorProfile:hover + .actorName{
+    visibility: visible;
+}
+/* ---------------- */

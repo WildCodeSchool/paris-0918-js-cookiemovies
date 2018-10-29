@@ -6,7 +6,7 @@ import AffichGenres from "./AffichGenres.js";
 import "./FicheFilms.css"
 
 const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
-const movie = 338952
+const movie = 360920
 
 class Fiches extends Component {
 
@@ -87,22 +87,24 @@ class Fiches extends Component {
                         temps={this.state.temps}
                         date={this.state.date}
                     />
-                    
+
                     {this.state.genres.map((elem,index)=>
                         <AffichGenres
                         key={index}
                         genres={elem.name}
                         />
                     )}
+                    
 
                     {/* Je lui demande d'afficher que les 4 premiers acteurs */}
-
                     {this.state.acteurs.slice(0,4).map((element,id)=>
                         <Acteurs
                             key={id}
                             acteurName={element.name} 
                             photographie={element.profile_path}/> 
-                    )} 
+                    )}
+                    
+                    
             </div>
     )}
 }

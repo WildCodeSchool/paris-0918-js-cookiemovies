@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import Background from './Background';
+
+import FicheFilms from './synopfilm/FicheFilms'
+
+
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Background />
+      <div >
+        <FicheFilms />
       </div>
     );
   }

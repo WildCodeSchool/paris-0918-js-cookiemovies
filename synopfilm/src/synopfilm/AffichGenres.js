@@ -10,7 +10,7 @@ class AffichGenres extends Component{
          return(
            
             <div className="genres">
-                <p>Genres<br/>{this.props.genres}</p>
+                <p>{this.props.genres}</p>
             </div>
              
              

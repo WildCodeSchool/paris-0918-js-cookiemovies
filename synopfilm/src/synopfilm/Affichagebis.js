@@ -5,7 +5,12 @@ import imageNull from './test3.png';
 
 class Affichagebis extends Component{
     
-
+convertHours = (min) => {
+            const h = Math.trunc(min/60)
+            const m = Math.ceil((min/60 - h)*60)
+            if (m>9) return h + 'h' + m
+            return h + 'h0' + m
+            }
      render(){
 
         //  Debut de l'url de l'image
@@ -15,7 +20,9 @@ class Affichagebis extends Component{
         const imageSrc = this.props.image ? `${image_key}${this.props.image}` : imageNull
 
         //Fonction qui dit tu me divises la valeur reçue par 60 puis tu remplaces le point par h et n'affiche que deux chiffres après la virgule
-        const time = (`${this.props.temps / 60}`).substring(0, 4)
+        
+        const time = this.convertHours(`${this.props.temps}`)
+        // const time = (`${this.props.temps / 60}`).substring(0, 4)
         const moinsPoint = time.split('.').join("h")
 
         //Changement du format de la date 
@@ -34,14 +41,32 @@ class Affichagebis extends Component{
 
                 <img className="imageFond" src={`${image_key}${this.props.imageFond}`} alt="background du film"/>
                 <h1 className="titleTitre">{this.props.title}</h1>
-                <p className="descri">{this.props.description}</p>
-                <img className="affichette" src={imageSrc} alt="affiche du film"/>
-                <div className="containerDateReal">
-                    <p className="titreDate">Date</p>
-                    <p className="date">{newDate}</p>
-                    <p className="realisateur">Realisateur<br/>{this.props.realisateur}</p>
-                    <p className="duree">Durée<br/>{moinsPoint}</p>
+
+                <div className="enTeteFF">
+                    <img className="affichette" src={imageSrc} alt="affiche du film"/>
+                    <div className="test">
+                        <p className="descri">{this.props.description}</p>   
+
+                        <div className="containerDateReal">
+                        
+                            <div className="containerDate">
+                                <p className="titreDate">Date </p>
+                                <p className="date">{newDate}</p>
+                            </div>
+
+                            <div className="containerReal">
+                                <p className="titreReal">Realisateur</p>
+                                <p className="real">{this.props.realisateur}</p>
+                            </div>
+
+                            <div className="containerDuree">
+                                <p className="titreDuree">Durée</p>
+                                <p className="duree">{moinsPoint}</p>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
+
             </div>
              
              
