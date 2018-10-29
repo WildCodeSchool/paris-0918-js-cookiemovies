@@ -7,7 +7,6 @@ class TrailerView extends Component {
 
     render(){
         const youtube_url = 'https://www.youtube.com/embed/'
-        const youtube_Api_key ='AIzaSyDH45KizTDULzAEqdFFe1jnFrLhVc8ft5c'
 
 
 
