@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import Background from './Background';
+
 import logo from './logo.svg';
 
 import Header from "./components/Header";
@@ -27,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="body">
+        <Background />
         <Header />
         <SlidesInTheater />
         <SlidesNotOut />
