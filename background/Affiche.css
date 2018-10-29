@@ -1,0 +1,84 @@
+*{ /*initialise tout la page index et les autres a 0*/
+    padding: 0;
+    margin: 0;
+}
+.tabStream1 /*alignement des affiches */
+
+    {
+        display: flex;
+        flex-wrap : wrap;
+        align-items:flex-start; 
+        background-color: transparent;
+        position: fixed;
+        width: 100%;
+        left: 0.46%;
+     }
+ 
+     img{ /*taille des images affiches*/
+
+        height : 300px;
+        width : 230px;
+        opacity: 0.4;
+       
+      }
+.backimg { /*background noir et taille */
+    width: 100%;
+    height: 100vh;
+    background-color : #0c0c0c;
+}
+
+
+/* background responsive pour pas avoir des marges noires sur les cotes*/
+@media screen and (max-width: 2285px){
+    .tabStream1 {
+        position: fixed;
+        
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .tabStream1 {
+        position: fixed;
+        left : 2%;
+    }
+}
+
+
+@media screen and (max-width: 1040px){
+    .tabStream1 {
+        position: fixed;
+        left : 20%;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .tabStream1 {
+        position: fixed;
+        left : 5%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .tabStream1 {
+        position: fixed;
+        left : 23%;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .tabStream1 {
+        position: fixed;
+        left : 20%;
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    .tabStream1 {
+        position: fixed;
+        left : 15%;
+    }
+}
