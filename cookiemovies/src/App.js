@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Background from './Background';
 
 import logo from './logo.svg';
 
@@ -30,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="body">
-        <Background />
+
         <Header />
         <SlidesInTheater />
         <SlidesNotOut />
