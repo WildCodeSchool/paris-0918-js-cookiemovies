@@ -1,0 +1,244 @@
+body{
+    width:100%;
+    background-color: black;
+    color: white; 
+}
+.contain h2{
+    margin: 0px;
+    padding-top: 3px;
+    padding-left: 3px;
+
+}
+.gauche{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    top :195px;
+    z-index:40;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+ 
+}
+.droite{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top :195px;
+    right: 0px;
+    z-index:40;
+    opacity: 1;
+   
+}
+.gauche_1{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    top :635px;
+    z-index:40;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.droite_1{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top :635px;
+    right: 0px;
+    z-index:40;
+    opacity: 1; 
+}
+.gauche_2{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    top :1060px;
+    z-index:40;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.droite_2{
+    cursor: pointer;
+    position: fixed;
+    position : absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top :1060px;
+    right: 0px;
+    z-index:40;
+    opacity: 1; 
+}
+.ajout{
+    position : absolute;
+    top:4px;
+    right: 3px;
+}
+.cloche{
+    position : absolute;
+    top:28px;
+    right: 3px;
+}
+.cloche_coul{
+    position : absolute;
+    top:28px;
+    right: 3px;
+}
+.check{
+    position : absolute;
+    top:52px;
+    right: 3px;
+}
+.check_coul{
+    position : absolute;
+    top:52px;
+    right: 3px;
+}
+.boutonAjout{
+    position : absolute;
+    top:4px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 20;
+    opacity:0;
+}
+.boutonCloche{
+    position : absolute;
+    top:28px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity:0;
+    z-index: 20;    
+}
+.boutonChecked{
+    position : absolute;
+    top:52px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity:0;
+    z-index: 20;
+}
+figure.off .cloche{
+     visibility: hidden;
+}
+figure.off .check{
+    visibility: hidden;
+}
+figure.on .cloche_coul{
+    visibility: hidden;
+}
+figure.on .check_coul{
+    visibility: hidden;
+}
+
+figure.yellow .cloche_coul {
+    visibility: hidden;
+}
+figure.checked .check_coul {
+    visibility: hidden;
+}
+    
+.tile_title h4{
+    text-align: center;
+    line-height: 0px;
+    word-break: normal;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1px;
+    margin-left: 1px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.row_inner{
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    margin: 70px 0;
+    padding-bottom: 10px;
+}
+
+.tile {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 250px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    font-size: 8px;
+    font-weight: bold;
+  }
+.tile_img {
+    width: 150px;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.tile_media img{
+    width: 150px;
+    height: 250px;
+}
+.tile_details {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    transition: 450ms opacity;
+   
+  }
+  .tile_details p{
+    word-break: normal;
+    text-align: justify; 
+    color:white;
+  }
+  .tile_details button{
+    border-radius: 9px;
+  }
+
+a:link,     
+a:hover,
+a:active,
+a:visited {
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+  
+}
+a:hover {
+  color: #7f8c8d;
+  text-decoration: underline;
+}
+.tile:hover .tile_details {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.row_inner:hover {
+  -webkit-transform: translate3d(-62.5px, 0, 0);
+          transform: translate3d(-62.5px, 0, 0);
+          z-index: 10;
+
+} 
+.contain :hover .tile {
+    opacity: 0.5;
+}
+.row_inner:hover .tile:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          opacity: 1;
+}
+.tile:hover ~ .tile {
+  -webkit-transform: translate3d(125px, 0, 0);
+          transform: translate3d(125px, 0, 0);
+}

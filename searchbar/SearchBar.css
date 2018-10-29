@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+} 
+
+input{
+    color: white;
+    background-color: black;
+    height: 30px;
+    border: 2px solid rgba(112, 112, 112, 0.5);
+    border-radius: 20px;
+}
+
+::placeholder{
+    color: rgba(112, 112, 112, 0.5);
+}
+
+/* container de la search bar */
+.affichageSB{
+    background-color: black;
+    position: relative;
+    display: inline-block;
+}
+
+@media screen and (max-width: 320px){
+    .affichageSB {
+        left : 5%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .affichageSB {
+        left : 13%;
+    }
+}
+/* titre des films */
+.titleSB{
+    margin-left: 1.4em;
+    width: 160px;
+    word-break: break-all;
+    text-align: center;
+    font-family: 'Raleway';
+}
+.lienSB:visited{
+    color: white;
+}
+.lienSB{
+    text-decoration: none;
+}
+
+img {
+    width: 160px;
+    height: 250px;
+    padding-left: 20px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+img:hover{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+h1{
+    color: white;
+    font-size: 10px;
+}
