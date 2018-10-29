@@ -12,9 +12,8 @@ background-color: black;
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    /* background: #976734; */
-    background-image: -moz-linear-gradient((pink, violet,blue))
-  }
+    background: #976734;
+     }
   
   /* Position and sizing of clickable cross button
   .bm-cross-button {
@@ -37,7 +36,7 @@ background-color: black;
   
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
-    fill: #7e2676;
+    /* fill: #7e2676; */
     opacity: 0;
   }
   .bm-menu-wrap {
@@ -67,15 +66,25 @@ background-color: black;
   .my-menu .enSalle{
       display: flex;
       flex-direction: row;
+      margin-top: 80px;
   }
-   .my-menu .enSalle .cloche{
-      width: 35px;
-  }
-.my-menu .enSalle .cloche{
-    position: absolute;
-    top:0;
-    right: 0;
+ 
+
+.my-menu .notif .cloche{
+  width:20px;
 }
+.my-menu .notif p{
+  font-size:20px;
+  color: white;
+}
+.my-menu .notif{
+  float: right;
+  
+}
+
+
+
+
   .my-menu .enSalle p{
       color :black;
       font-size: 15px;
@@ -123,4 +132,11 @@ a {
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+.ligne{
+  border-top: 0.5px solid white;
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 50px;
+}
   

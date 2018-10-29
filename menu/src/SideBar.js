@@ -6,6 +6,7 @@ import proch from './icons/prochainement.png'
 import sorti from './icons/dejasorti2.png'
 import logo from "./icons/logo.png"
 import cloche from "./icons/cloche-coul.png"
+import avatar from "./icons/avatar.png"
 
 
 class SideBar extends React.Component {
@@ -26,11 +27,11 @@ class SideBar extends React.Component {
           <img src={salle} className="cookie_enSalle" alt="" />
           <a id="home" className="menu-enSalle" href="/">En Salle</a>
 
-          <img src={cloche} className="cloche" alt="" />
+          
 
 
           
-             {/* <div className="borderCercle"><p>{this.props.count}</p></div> */}
+             {/* <div className="borderCercle"></div> */}
 
            
         </div>
@@ -43,10 +44,13 @@ class SideBar extends React.Component {
         <div className="sorti">
           <img src={sorti} className="cookie_sorti" alt="" />
           <a onClick={this.showSettings} className="menu-sorti" href="">Déja Sortis</a>
-
-          <div className="basdemenu"><h1></h1>
-          </div>
         </div>
+        <div className="ligne"></div>
+        <div className="notif">
+       
+        <p> <img src={cloche} className="cloche" alt="" />{this.props.count}</p>
+        </div>
+        <img src={avatar} className="logoAvatar" alt=""/>
       </Menu>
       
     );
