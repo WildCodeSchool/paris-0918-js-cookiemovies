@@ -1,0 +1,56 @@
+.inscription{
+  padding-top: 17%;
+padding-bottom: 3%;
+position: fixed;
+margin: auto;
+}
+.cardsignin {
+  display: flex;
+  opacity: 1;
+  margin-left: 120%;
+  margin-top: 15px;
+  margin-bottom: 110px;
+  border-radius: 10px;
+  width: 450px;
+
+}
+
+button {
+
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  margin-top: 105px;
+
+}
+.btn.btn-elegant.btn-lg.Ripple-parent  {
+  position: absolute;
+  z-index: 1;
+  top:0px;
+  right: 60px;
+  margin: 60px
+  
+  
+}
+
+.cardsignin .fa {
+    font-size: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 55px;
+    
+}
+
+
+.cardsignin .fa-facebook-square {
+  color : #3b5998;
+}
+
+.cardsignin .fa-google {
+  color: #db3236;
+}
+
+.cardsignin .fa-twitter {
+  color : #1dcaff;
+}
+

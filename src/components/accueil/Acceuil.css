@@ -1,0 +1,22 @@
+*
+{
+    box-sizing: border-box;
+}
+
+
+.poster img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.poster .box{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 0;
+}
+.poster{
+    background-color: black;
+    margin-top:-40px;
+
+}
