@@ -11,44 +11,30 @@ p, h1{
     color: white;
 }
 
-/* ---- AFFICHGENRES.JS ---- */
-.genres{
-    display: inline-block;
-    height: 2em;
-    width: 6em;
-    text-align: center;
-    margin: 1em;
-    line-height: 1px;
-    border-radius: 50px;
-    background-color: white;
-}
-/* ---------------- */
-
-
 /* ---- AFFICHAGESBIS.JS ---- */
 .pageFilm{
-    margin: 10em;
-    /* border: 1px solid white; */
+    margin: 5em;
+    width: 80%;
 }
 
 .enTeteFF{
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-around;
-    /* border: 1px solid white;*/
 } 
-.test{
+.descriDateEtc{
     display: flex;
     flex-direction: column;
+    padding-left: 2em;
 }
+
 /* image de Fond */
 .imageFond{
     position: absolute;
-    /* opacity: 0.75; */
-    clip:rect(1000px,1000px,1900px,1000px);
-    /* padding-left: 10em; */
-    filter: blur(7px);
-    width: 1000px;
+    opacity: 0.4;
+    clip: rect(0px,10000px,200px,0px);
+    padding-left: 5%;
+    filter: blur(5px);
+    width: 75%;
 }
 
 /* affiche du film */
@@ -62,26 +48,22 @@ p, h1{
 .titleTitre{
     text-transform: uppercase;
     position: relative;
-    margin-top: 3em;
-    margin-left: 10em;
-    /* border: 1px solid white; */
+    text-align: center;
 }
 
 /* synopsis */
 .descri{
-    /* height: 10px; */
+    padding-right: 5%;
     position: relative;
-    margin-top: 3em;
+    margin-top: 10em;
     text-align: justify;
-    /* border: 1px solid white; */
 }
 
 .containerDateReal{
     display: flex;
     justify-content: flex-start;
-    /* border: 1px solid white; */
-    /* padding-left: 25em; */
 }
+
 /* date */
 .containerDate{
     display: flex;
@@ -90,10 +72,11 @@ p, h1{
 }
 .titreDate{
     font-family:'Raleway';
-    color: white;
+    color: #7e2676;
 }
 
 .date{
+    padding-left: 10px;
 }
 
 /* realisateur */
@@ -104,10 +87,11 @@ p, h1{
 }
 .titreReal{
     font-family:'Raleway';
-    color: white;
+    color: #3a1b5c;
 }
 .real{
     color: white;
+    padding-left: 10px;
 }
 
 /* duree */
@@ -118,32 +102,70 @@ p, h1{
 }
 .titreDuree{
     font-family:'Raleway';
-    color: white;
+    color: #1a0f7f;
 }
 .duree{
     color: white;
+    padding-left: 10px;
+}
+
+.containerGenreActeur{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerGenres{
+    display: flex;
+    justify-content: center
+}  
+
+.containerActors{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 /* ---------------- */
 
 /* ---- ACTEURS.JS ---- */
 
-.containerActor{
-    display: inline-block;
-    text-align: center;
-    padding-left: 5em;
+.containerActeurs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10em;
 }
 .actorProfile{
+    margin-top: 10%;
     height: 60px;
     width: 60px;
     border-radius: 100px;
     object-fit: cover;
 }
+
 .actorName{
     visibility: hidden;
-    color: white;
-    
+    color: white; 
+    text-align: center;
 }
+
 .actorProfile:hover + .actorName{
     visibility: visible;
+}
+/* ---------------- */
+
+
+/* ---- AFFICHGENRES.JS ---- */
+
+.genres{
+    height: 2em;
+    flex-wrap: wrap;
+    width: 6em; 
+    text-align: center;
+    margin: 1em; 
+    line-height: 1px;
+    border-radius: 50px;
+    background-color: white;
 }
 /* ---------------- */
