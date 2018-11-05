@@ -1,0 +1,142 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 36px;
+    top: 36px;
+  }
+  body{
+background-color: black;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #976734;
+     }
+  
+  /* Position and sizing of clickable cross button
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  /* .bm-cross {
+    background: #412c14; */
+  
+  
+  /* General sidebar styles */
+  .bm-menu {
+    /* background: #976734; */
+    font-size: 150%;
+    height: auto !important;
+    width: 100%,
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    /* fill: #7e2676; */
+    opacity: 0;
+  }
+  .bm-menu-wrap {
+    background-image: url("./images/degrade2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: black;
+    padding: 0.8em;
+    padding-top: 20px;
+    height: auto;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    margin-top: 30px;
+  }
+   
+  .my-menu  .enSalle a{
+    /*padding: 35px;*/
+  }
+  .my-menu .enSalle{
+      display: flex;
+      flex-direction: row;
+      margin-top: 80px;
+  }
+ 
+
+.my-menu .notif .cloche{
+  width:20px;
+}
+.my-menu .notif p{
+  font-size:20px;
+  color: white;
+}
+.my-menu .notif{
+  float: right;
+  
+}
+
+
+
+
+  .my-menu .enSalle p{
+      color :black;
+      font-size: 15px;
+      margin-top: -1px;
+       
+  }
+  .my-menu .enSalle .borderCercle{
+    
+    width: 20px;
+    height: 20px;
+    background: rgb(155, 16, 173);
+    border-radius: 50%;
+    border:2px solid white;
+  
+  }
+
+ .my-menu .sorti a{
+  padding: 24px;
+}
+.my-menu img {
+  width: 40px;
+  vertical-align:middle;
+  padding: 10px;
+
+}
+
+.my-menu .logo_cookie {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.my-menu .cookie_enSalle {
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color : white;
+}
+
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+.ligne{
+  border-top: 0.5px solid white;
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 50px;
+}
+  
