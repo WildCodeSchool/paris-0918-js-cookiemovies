@@ -11,6 +11,7 @@ convertHours = (min) => {
             if (m>9) return h + 'h' + m
             return h + 'h0' + m
             }
+
      render(){
 
         //  Debut de l'url de l'image
@@ -20,9 +21,8 @@ convertHours = (min) => {
         const imageSrc = this.props.image ? `${image_key}${this.props.image}` : imageNull
 
         //Fonction qui dit tu me divises la valeur reçue par 60 puis tu remplaces le point par h et n'affiche que deux chiffres après la virgule
-        
         const time = this.convertHours(`${this.props.temps}`)
-        // const time = (`${this.props.temps / 60}`).substring(0, 4)
+
         const moinsPoint = time.split('.').join("h")
 
         //Changement du format de la date 
@@ -44,7 +44,7 @@ convertHours = (min) => {
 
                 <div className="enTeteFF">
                     <img className="affichette" src={imageSrc} alt="affiche du film"/>
-                    <div className="test">
+                    <div className="descriDateEtc">
                         <p className="descri">{this.props.description}</p>   
 
                         <div className="containerDateReal">

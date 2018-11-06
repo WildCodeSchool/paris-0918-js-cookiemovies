@@ -54,9 +54,10 @@ class  SlidesInTheater extends Component {
                 <img className="droite" src={fleche_d} alt="" /></a>
         </div>    
         <div className="ro" id="contain">
-                {this.state.results.map((element, id) => 
-                
-                    <Slides key={element.id} title = {element.title} 
+                {this.state.results.map((element, index) => 
+                    <Slides
+                        key={index}
+                        title = {element.title} 
                         id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)

@@ -16,6 +16,7 @@ import ImageNull from './imagesSlides/afficheNull.png'
 import './SlidesInTheater.css';
 import './SlidesNotOut.css';
 import './SlidesOutOfTheater.css';
+import FicheFilms from '../synopfilm/FicheFilms';
 
 class Slides extends React.Component{
     constructor(props) {
@@ -24,18 +25,21 @@ class Slides extends React.Component{
           on: props.on,
           white: props.white,
           unchecked : props.unchecked,
-          id:undefined
-           
-    
+          id:undefined,
+          movieOn: false,
+        //   slidesOn: true,
         };
       }
 
-      testIDimage = () =>{
-          this.setState({id : this.props.id})
-          console.log(this.state.id);
-          
-          
-      }
+    testIDimage = () => {
+        this.setState({id : this.props.id})
+        this.setState({
+            movieOn: true,
+            // slidesOn: false
+        })
+        console.log(this.props.id);
+        
+    }
       
       handClick = () => {
         this.setState({ on: !this.state.on });                  
@@ -58,11 +62,10 @@ class Slides extends React.Component{
                     localStorage.setItem('myMoviesAlert', JSON.stringify(myMoviesAlert));                   
                     console.log(localStorage);
                 }
-       
       };
-      handleClick_2 = () => {
-          this.setState({ unchecked: !this.state.unchecked})  
 
+    handleClick_2 = () => {
+          this.setState({ unchecked: !this.state.unchecked})  
 
           var myMoviesList = []
           myMoviesList = JSON.parse(localStorage.getItem('myMoviesList'));
@@ -77,8 +80,8 @@ class Slides extends React.Component{
                       localStorage.setItem('myMoviesList', JSON.stringify(myMoviesList));                   
                       console.log(localStorage);
                   }
-      } 
-      
+    } 
+
     render(){
         
         const image_key ="https://image.tmdb.org/t/p/w500";
@@ -88,58 +91,56 @@ class Slides extends React.Component{
         const boutonClo = this.state.white ? 'white' : 'yellow';
         const boutonChe = this.state.unchecked ? 'unchecked' : 'checked';
         
-        
+       if(this.state.movieOn === true){
+        return(
+            <div><FicheFilms id={this.props.id}/></div>
+        )}else{
+        // if(this.state.slidesOn === true){
         return( 
-          
-               <div className="slides" > 
-                    
-                <div className="row_inne">
-                
-                    <p>{this.props.alert}</p>
-                        <div className="tile">
-                        <div className="coul">
-                        
-                                                                                 
-                            <button onClick={this.handClick} className={showIcon} className ={alert} className="boutonAjout"></button>
-                                <img className="ajout" src={ajout} alt=""/>
-                                    <figure className={showIcon} >
-                                        <img className="cloche" src={cloche}alt=""/>
-                                        <img className="check" src={check}alt=""/>
-                                        </figure>
+            <div>
+                <div className="slides" > 
+                    <div className="row_inne">
+                        <p>{this.props.alert}</p>
+                            <div className="tile">
+                            <div className="coul">
                             
-                            
-                                <button onClick={this.handleClick_1} className={boutonClo} id= "alert" className="boutonCloche" ></button>
-
-                                <figure className={boutonClo}>
-                                    <img className="cloche_coul" src={cloche_coul}alt=""/>
-                                </figure> 
+                                                                    
+                                <button onClick={this.handClick} className={showIcon} className ={alert} className="boutonAjout"></button>
+                                    <img className="ajout" src={ajout} alt=""/>
+                                        <figure className={showIcon} >
+                                            <img className="cloche" src={cloche}alt=""/>
+                                            <img className="check" src={check}alt=""/>
+                                            </figure>
                                 
-                            <button onClick={this.handleClick_2} className={boutonChe}  className="boutonChecked" ></button>
-                                <figure className={boutonChe}>
-                                    <img className="check_coul" src={check_coul}alt=""/>
-                                </figure>
-                           
-                        
-                        </div>
-                            <div   className="tile_media">
-                                <img   className="tile_img" src={imageSrc}alt="" />
+                                
+                                    <button onClick={this.handleClick_1} className={boutonClo} id= "alert" className="boutonCloche" ></button>
+
+                                    <figure className={boutonClo}>
+                                        <img className="cloche_coul" src={cloche_coul}alt=""/>
+                                    </figure> 
+                                    
+                                <button onClick={this.handleClick_2} className={boutonChe}  className="boutonChecked" ></button>
+                                    <figure className={boutonChe}>
+                                        <img className="check_coul" src={check_coul}alt=""/>
+                                    </figure>
+                            
+                            
                             </div>
-                            <div onClick={this.testIDimage} className="tile_details">  
-                                <div className="tile_title">                  
-                                    <p>{this.props.description.substr(0, 140)} [...]</p>
-                                    <h4>{this.props.title.substr(0, 34)}</h4>
-                                </div>                                            
+                                <div   className="tile_media">
+                                    <img className="tile_img" src={imageSrc} alt="" />
+                                </div>
+                                <div onClick={this.testIDimage} className="tile_details">  
+                                    <div className="tile_title">                  
+                                        <p>{this.props.description.substr(0, 140)} [...]</p>
+                                        <h4>{this.props.title.substr(0, 34)}</h4>
+                                    </div>                                            
+                                </div>
                             </div>
-                        </div>
-                   
+                    
+                    </div>
                 </div>
-                </div> 
-              
-
-            
-
-           
+            </div>   
         );
-    }
-}
+    }}
+ }
 export default Slides

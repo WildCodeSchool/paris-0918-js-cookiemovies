@@ -5,7 +5,6 @@ class TrailerView extends Component {
     _onReady(event) {
         // access to player in all event handlers via event.target
         event.target.pauseVideo();   
-          
     }      
      
 
@@ -19,24 +18,16 @@ class TrailerView extends Component {
           };
         const youtube_url = 'https://www.youtube.com/watch?v='
 
-          
-
-
-
-
+        
         return(
             <div>
-                
-               
-        <YouTube
-                videoId={this.props.youtubeKey}
-                opts={opts}
-                onReady={this._onReady}/>
-
+                <YouTube
+                    videoId={this.props.youtubeKey}
+                    opts={opts}
+                    onReady={this._onReady}
+                />
             </div>
-       
-        )
-        
+        ) 
     }
 }
-export default TrailerView
+export default TrailerView;
