@@ -10,8 +10,7 @@ import SimilarMovie from "../similar/SimilarMovie";
 
 const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
 const movie = 550
-//424694
-// 360920
+
 
 class FicheFilms extends Component {
 
@@ -29,7 +28,7 @@ class FicheFilms extends Component {
 
     // Récupération de l'api pour le titre, l'image, le synopsis, l'id, la durée, l'image de fond et les genres
     getInfo = async () => {
-        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${this.props.id}?api_key=${api_key}&language=fr-FR`)
+        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=${api_key}&language=fr-FR`)
         const api_data = await recup_data.json();
         console.log(api_data);
 
@@ -113,6 +112,7 @@ class FicheFilms extends Component {
                 <div className="test">
                 <SimilarMovie id={this.props.id}/></div>
                 {/* <TrailerApi id={this.pros.id}/> */}
+
             </div>
         )
     }
