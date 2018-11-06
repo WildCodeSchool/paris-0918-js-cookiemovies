@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 
 import './App.css'
 
-import Top from "./components/accueil/Top";
-import AccueilApi from "./components/accueil/AccueilApi";
-import Corps from "./components/accueil/Corps";
-import Bulle from './components/logoBulle/Logobulle'
-import Footer from './components/footer/Footer'
+// import Top from "./components/accueil/Top";
+// import AccueilApi from "./components/accueil/AccueilApi";
+// import Corps from "./components/accueil/Corps";
+// import Bulle from './components/logoBulle/Logobulle';
+// import Footer from './components/footer/Footer';
 
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
-import 'mdbreact/dist/css/mdb.css';
+// import 'font-awesome/css/font-awesome.min.css';
+// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+// import 'mdbreact/dist/css/mdb.css';
 
+import FicheFilms from "./components/synopfilm/FicheFilms";
 
 // import Header from "./components/header/Header";
-// import SlidesInTheater from "./components//slides/SlidesInTheater";
-// import SlidesNotOut from "./components//slides/SlidesNotOut";
-// import SlidesOutOfTheater from "./components/slides/SlidesOutOfTheater";
+import SlidesInTheater from "./components//slides/SlidesInTheater";
+import SlidesNotOut from "./components//slides/SlidesNotOut";
+import SlidesOutOfTheater from "./components/slides/SlidesOutOfTheater";
 
 // import NowPlaying from "./components/NowPlaying";
 // import Upcoming from "./components/Upcoming";
@@ -38,16 +39,18 @@ class App extends Component {
   render() {
     return (
       <div className="body">
-      <Top />
+      {/* <FicheFilms /> */}
+
+      {/* <Top />
       <AccueilApi />
       <Corps />
       <Bulle />
-      <Footer />
+      <Footer /> */}
 
-        {/* <Header />
+        {/* <Header />*/}
         <SlidesInTheater />
         <SlidesNotOut />
-        <SlidesOutOfTheater /> */}
+        <SlidesOutOfTheater /> 
 
         {/* <NowPlaying />
         <Upcoming />

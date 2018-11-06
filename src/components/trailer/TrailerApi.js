@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TrailerView from './TrailerView'
+import TrailerView from './TrailerView';
 
 
 class TrailerApi extends Component {
@@ -13,10 +13,7 @@ class TrailerApi extends Component {
     const movie_id = 439079
     const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?${api_key}&language=en-FR`)
     const api_data = await recup_data.json()
-    //console.log(api_data.results[0].key);
-
-    
-
+    console.log(api_data.results[0].key);
     this.setState({
         youtubeKey: api_data.results[0].key
     })
@@ -36,4 +33,4 @@ class TrailerApi extends Component {
         )
     }
 }
-export default TrailerApi
+export default TrailerApi;

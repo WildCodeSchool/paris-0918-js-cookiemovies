@@ -1,21 +1,19 @@
 import React from 'react';
-import DisplaySimilar from './DisplaySimilar'
-import "./DisplaySimilar.css"
+import DisplaySimilar from './DisplaySimilar';
+import "./DisplaySimilar.css";
 
 class Similar extends React.Component {
     
         state ={
             result :[]
         }
-        getsimilar = async () => {
-        const API_KEY = "2eda3279b136755e70112c03536cdd22";
-        const ID_MOVIE = 360920;
-        
-        
+
+    getsimilar = async () => {
+    const API_KEY = "2eda3279b136755e70112c03536cdd22";
+    const ID_MOVIE = this.props.id;
     const api_call = await fetch (`https://api.themoviedb.org/3/movie/${ID_MOVIE}/similar?api_key=${API_KEY}&language=fr-FR&page=1`);
     const data = await api_call.json();
         console.log(data);
-        // let cuttedarray = result.slice(0, 2)
     this.setState({
         result : data.results
         })
