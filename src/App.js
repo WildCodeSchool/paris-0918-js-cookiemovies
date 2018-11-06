@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 
+import './App.css'
 
-import logo from './logo.svg';
+// import Top from "./components/accueil/Top";
+// import AccueilApi from "./components/accueil/AccueilApi";
+// import Corps from "./components/accueil/Corps";
+// import Bulle from './components/logoBulle/Logobulle';
+// import Footer from './components/footer/Footer';
 
-import Header from "./components/Header";
-import SlidesInTheater from "./components/SlidesInTheater";
-import SlidesNotOut from "./components/SlidesNotOut";
-import SlidesOutOfTheater from "./components/SlidesOutOfTheater";
-import NowPlaying from "./components/NowPlaying";
-import Upcoming from "./components/Upcoming";
-import Top from "./components/Top";
-import AccueilApi from "./components/AccueilApi";
-import Corps from "./components/Corps";
-import TrailerApi from "./components/TrailerApi";
+// import 'font-awesome/css/font-awesome.min.css';
+// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+// import 'mdbreact/dist/css/mdb.css';
+
+import FicheFilms from "./components/synopfilm/FicheFilms";
+
+// import Header from "./components/header/Header";
+import SlidesInTheater from "./components//slides/SlidesInTheater";
+import SlidesNotOut from "./components//slides/SlidesNotOut";
+import SlidesOutOfTheater from "./components/slides/SlidesOutOfTheater";
+
+// import NowPlaying from "./components/NowPlaying";
+// import Upcoming from "./components/Upcoming";
+// import TrailerApi from "./components/TrailerApi";
+
 
 import './App.css';
 
@@ -29,17 +39,23 @@ class App extends Component {
   render() {
     return (
       <div className="body">
+      {/* <FicheFilms /> */}
 
-        <Header />
+      {/* <Top />
+      <AccueilApi />
+      <Corps />
+      <Bulle />
+      <Footer /> */}
+
+        {/* <Header />*/}
         <SlidesInTheater />
         <SlidesNotOut />
-        <SlidesOutOfTheater />
-        <NowPlaying />
+        <SlidesOutOfTheater /> 
+
+        {/* <NowPlaying />
         <Upcoming />
-        <TrailerApi />
-        <Top />
-        <AccueilApi />
-        <Corps />
+        <TrailerApi /> */}
+       
       </div>
     );
   }

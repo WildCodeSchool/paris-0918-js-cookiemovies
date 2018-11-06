@@ -22,6 +22,8 @@ class Affiche extends Component {
     const api_data = await recup_data.json(); /*transforme les donnees json pour le composant*/
     const api_data_2 = await recup_data_2.json(); /*transforme les donnees des 20 img sup pour le composant*/
     console.log(api_data);
+    console.log(api_data_2);
+
 
     this.setState({
       tabStream:
@@ -42,7 +44,7 @@ class Affiche extends Component {
           {this.state.tabStream.map(
             element => (
               <ImageBack image={element.poster_path} />
-            ) /*appel du composant ImageBack pour afficher l'adresse url api du debut*/,
+            ) /*appel du composant ImageBack pour afficher l'adresse url api du debut*/
           )}
           {this.state.tabStream_2.map(element => (
             <ImageBack

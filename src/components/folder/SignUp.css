@@ -1,7 +1,10 @@
 .cardsignup {
   display: flex;
-  opacity: 0.6;
-  margin-left: 55%;
-  margin-top: 5px;
+  opacity: 1;
+  margin-left: 100%;
+  margin-right: 100%;
+  margin-top: 15px;
+  margin-bottom: 110px;
+  border-radius: 10px;
   width: 450px;
 }

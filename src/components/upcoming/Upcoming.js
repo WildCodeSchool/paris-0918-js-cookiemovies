@@ -1,5 +1,7 @@
 import React from 'react'
 import UpcomingView from './UpcomingView'
+import Sidebar from '../menu/SideBar'
+
 
 class Upcoming extends React.Component{ 
     state = {
@@ -34,6 +36,7 @@ class Upcoming extends React.Component{
     render(){
         return(
             <div className="Upcoming">
+            <Sidebar />
             <div className="box">
             {this.state.results.map((element, id) => 
                     <UpcomingView key={element.id} title = {element.title} 

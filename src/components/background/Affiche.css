@@ -4,24 +4,23 @@
 }
 .tabStream1 /*alignement des affiches */
 
-    {
-        display: flex;
-        flex-wrap : wrap;
-        align-items:flex-start; 
-        background-color: transparent;
-        position: fixed;
-        width: 100%;
-        left: 0.46%;
-     }
+{
+    display: flex;
+    flex-wrap : wrap;
+    align-items:flex-start; 
+    position: fixed;
+    width: 100%;
+    left: 0.46%;
+}
  
-     img{ /*taille des images affiches*/
-
-        height : 300px;
-        width : 230px;
-        opacity: 0.4;
-       
-      }
-.backimg { /*background noir et taille */
+.tabStream1 img
+{ /*taille des images affiches*/
+    height : 250px;
+    width : 180px;
+    opacity: 0.4;
+}
+.backimg 
+{ /*background noir et taille */
     width: 100%;
     height: 100vh;
     background-color : #0c0c0c;

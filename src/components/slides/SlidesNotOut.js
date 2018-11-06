@@ -1,8 +1,8 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
 import Slides from './Slides'
-import fleche_g from '../images_slides/fleche_gauche_bl.png'
-import fleche_d from '../images_slides/fleche_droite_bl.png'
+import fleche_g from './imagesSlides/fleche_gauche_bl.png'
+import fleche_d from './imagesSlides/fleche_droite_bl.png'
 
 class  SlidesNotOut extends Component {
 
@@ -15,7 +15,6 @@ class  SlidesNotOut extends Component {
       const api_key = "api_key=634dd449d69159e1d015a2f0febaaf61"
       const recup_data = await fetch(`https://api.themoviedb.org/3/movie/upcoming?${api_key}&language=en-FR&page=1&region=FR&language=fr`)
       const api_data = await recup_data.json()
-      console.log(api_data);
       
 
       this.setState({

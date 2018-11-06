@@ -10,7 +10,6 @@ class DisplaySimilar extends React.Component {
                     <img className = "imageSimilar" src={`${image_key}${this.props.affiche}`} alt="affiche"/>
                     <figcaption className = "affichageDS">{this.props.titre}</figcaption>
                 </figure>
-               
             </div>
         )
     }

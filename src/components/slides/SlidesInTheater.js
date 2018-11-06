@@ -1,8 +1,8 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
 import Slides from './Slides'
-import fleche_g from '../images_slides/fleche_gauche_bl.png'
-import fleche_d from '../images_slides/fleche_droite_bl.png'
+import fleche_g from './imagesSlides/fleche_gauche_bl.png'
+import fleche_d from './imagesSlides/fleche_droite_bl.png'
 
 
 class  SlidesInTheater extends Component {
@@ -38,7 +38,7 @@ class  SlidesInTheater extends Component {
                 document.getElementById('contain').scrollLeft -= 400;
             };
         }, false);
-        
+             
 
    
    return(
@@ -54,9 +54,10 @@ class  SlidesInTheater extends Component {
                 <img className="droite" src={fleche_d} alt="" /></a>
         </div>    
         <div className="ro" id="contain">
-                {this.state.results.map((element, id) => 
-                
-                    <Slides key={element.id} title = {element.title} 
+                {this.state.results.map((element, index) => 
+                    <Slides
+                        key={index}
+                        title = {element.title} 
                         id={element.id}
                         image={element.poster_path} 
                         description={element.overview}/>)

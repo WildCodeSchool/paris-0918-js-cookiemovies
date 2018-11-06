@@ -1,7 +1,7 @@
 /* debut liens pour images https://image.tmdb.org/t/p/w500/ */
 import React, {Component} from "react";
-import fleche_g from '../images_slides/fleche_gauche_bl.png'
-import fleche_d from '../images_slides/fleche_droite_bl.png'
+import fleche_g from './imagesSlides/fleche_gauche_bl.png'
+import fleche_d from './imagesSlides/fleche_droite_bl.png'
 import Slides from './Slides'
 
 class  SlidesOutOfTheater extends Component {

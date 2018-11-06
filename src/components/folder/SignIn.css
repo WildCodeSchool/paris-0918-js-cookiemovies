@@ -1,7 +1,17 @@
+.inscription{
+  position: absolute;
+  top: 0;
+  padding-top: 14%;
+  padding-bottom: 3%;
+  margin: 0 auto;
+  position: fixed;
+
+}
 .cardsignin {
   display: flex;
-  opacity: 0.6;
-  margin-left: 120%;
+  opacity: 1;
+  margin-left: 100%;
+  margin-right: 100%;
   margin-top: 15px;
   margin-bottom: 110px;
   border-radius: 10px;
@@ -13,6 +23,17 @@ button {
   background-color: black;
   opacity: 0.6;
   color: white;
+  margin-top: 105px;
+
+}
+.btn.btn-elegant.btn-lg.Ripple-parent  {
+  position: absolute;
+  z-index: 1;
+  top:0px;
+  right: 60px;
+  margin: 60px
+  
+  
 }
 
 .cardsignin .fa {

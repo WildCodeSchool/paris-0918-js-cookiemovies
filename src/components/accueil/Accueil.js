@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 class Accueil extends Component{
     render(){
+        
         const image_key ="https://image.tmdb.org/t/p/w500";
         return(
             <div className="wrapper">

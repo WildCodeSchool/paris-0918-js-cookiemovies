@@ -11,7 +11,8 @@ import youtube from './imgLogo/youtube.png';
 
 const Logobulle = () => {
   return (
-    <div className="logo">
+    <div className="logoStream">
+    <div className="row">
       <a href="https://www.netflix.com/fr/">
         <img src={netflix} className="bubbleStream" alt="logo netflix" />
       </a>
@@ -39,6 +40,7 @@ const Logobulle = () => {
       <a href="https://www.youtube.com">
         <img src={youtube} className="bubbleStream" alt="youtube" />
       </a>
+      </div>
     </div>
   );
 };

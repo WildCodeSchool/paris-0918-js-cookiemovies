@@ -5,19 +5,18 @@ import Acteurs from "./Acteurs.js";
 import AffichGenres from "./AffichGenres.js";
 import "./FicheFilms.css"
 
-import TrailerApi from "../trailer/TrailerApi";
-import SimilarMovie from "../similar/SimilarMovie";
-
 const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
-const movie = 550
+const movie = 424694
+//424694
+// 360920
 
-
-class FicheFilms extends Component {
+class Fiches extends Component {
 
     state = {
         title: undefined,
         image: undefined,
         description: undefined,
+        id: undefined,
         realisateur: undefined,
         temps: undefined,
         imageFond: undefined,
@@ -36,7 +35,7 @@ class FicheFilms extends Component {
             title: api_data.title,
             image: api_data.poster_path,
             description: api_data.overview,
-            idMovie: api_data.id,
+            id: api_data.id,
             temps: api_data.runtime,
             imageFond: api_data.backdrop_path,
             genres: api_data.genres
@@ -45,7 +44,7 @@ class FicheFilms extends Component {
 
     // Récupération de l'api pour le casting, le realisateur
     getCrew = async () => {
-        const recup_crew = await fetch(`https://api.themoviedb.org/3/movie/${this.state.idMovie}/credits?api_key=${api_key}`)
+        const recup_crew = await fetch(`https://api.themoviedb.org/3/movie/${this.state.id}/credits?api_key=${api_key}`)
         const api_bis = await recup_crew.json();
         console.log(api_bis);
         this.setState({
@@ -56,7 +55,7 @@ class FicheFilms extends Component {
 
     // Récupération de l'api pour la date de sortie
     getLaDate = async () => {
-        const recup_date = await fetch(`https://api.themoviedb.org/3/movie/${this.state.idMovie}/release_dates?api_key=${api_key}`)
+        const recup_date = await fetch(`https://api.themoviedb.org/3/movie/${this.state.id}/release_dates?api_key=${api_key}`)
         const api_date = await recup_date.json();
         const map_data = await api_date.results.filter(element => {
             if (element.iso_3166_1 === "FR") {
@@ -100,6 +99,7 @@ class FicheFilms extends Component {
                         )}
                     </div>
                     <div className="containerActors">
+
                         {/* Je lui demande d'afficher que les 4 premiers acteurs */}
                         {this.state.acteurs.slice(0, 4).map((element, id) =>
                             <Acteurs
@@ -109,12 +109,9 @@ class FicheFilms extends Component {
                         )}
                     </div>
                 </div>
-                <div className="test">
-                <SimilarMovie id={this.props.id}/></div>
-                {/* <TrailerApi id={this.pros.id}/> */}
 
             </div>
         )
     }
 }
-export default FicheFilms;
+export default Fiches;

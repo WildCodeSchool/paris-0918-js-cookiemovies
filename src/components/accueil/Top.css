@@ -1,28 +1,31 @@
-.banniere{
-    max-height: 180px;
-    background-color: black;
-}
-.fond {
-    height: 300px;
+
+.fond{
+    position: absolute;
+    top: 0;
+    height: 280px;
     width: 100%;
-    z-index: -9999999;
-    position: relative;
-    z-index: 9;
-    opacity: 1;
 
 }
 .logo{
-    width : 80px;
     position: absolute;
-    z-index: 24;
-    margin: 30px;
+    top: 0px;
+    margin: 60px;
+    width : 60px;
+    height: 60px;
+    z-index: 1;
 }
+
 .titre{
     position: absolute;
-    margin-top: 60px;
-    z-index: 24;
-    left: 150px;
+    top: 0px;
+    margin: 80px;
+    margin-left: 150px;
+    z-index: 1;
     font-size: 26px;
     color: white;
-    text-shadow: black 0.1em 0.1em 0.2em
+    text-shadow: black 0.1em 0.1em 0.2em;
+   
+    
+
 }
+
