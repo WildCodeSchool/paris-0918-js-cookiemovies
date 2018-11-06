@@ -7,6 +7,11 @@ import "./FicheFilms.css"
 
 import TrailerApi from "../trailer/TrailerApi";
 import SimilarMovie from "../similar/SimilarMovie";
+import DisplaySimilar from '../similar/DisplaySimilar'
+import TrailerView from '../trailer/TrailerView'
+// import SideBar from "../menu/SideBar.js";
+
+
 
 const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
 const movie = 550
@@ -24,13 +29,14 @@ class FicheFilms extends Component {
         genres: [],
         acteurs: [],
         date: undefined,
+        result : [],
+        youtubeKey:0
     }
 
     // Récupération de l'api pour le titre, l'image, le synopsis, l'id, la durée, l'image de fond et les genres
     getInfo = async () => {
-        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=${api_key}&language=fr-FR`)
+        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${api_key}&language=fr-FR`)
         const api_data = await recup_data.json();
-        console.log(api_data);
 
         this.setState({
             title: api_data.title,
@@ -47,7 +53,6 @@ class FicheFilms extends Component {
     getCrew = async () => {
         const recup_crew = await fetch(`https://api.themoviedb.org/3/movie/${this.state.idMovie}/credits?api_key=${api_key}`)
         const api_bis = await recup_crew.json();
-        console.log(api_bis);
         this.setState({
             realisateur: api_bis.crew[0].name,
             acteurs: api_bis.cast
@@ -64,22 +69,51 @@ class FicheFilms extends Component {
             }
         })
         const release = map_data[0].release_dates[0].release_date
-        console.log(api_date);
         this.setState({
             date: release
         })
     }
 
+    //recuperation de l'api pour les films similaires
+    getsimilar = async () => {
+    const API_KEY = "2eda3279b136755e70112c03536cdd22";
+    const api_call = await fetch (`https://api.themoviedb.org/3/movie/${this.state.idMovie}/similar?api_key=${API_KEY}&language=fr-FR&page=1`);
+    const data = await api_call.json();
+
+    this.setState({
+        result : data.results
+        })
+    }
+
+    getKeyForYoutube = async () =>{
+        const api_key = "api_key=634dd449d69159e1d015a2f0febaaf61"
+        // const movie_id = 439079
+        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${this.state.idMovie}/videos?${api_key}&language=en-FR`)
+        const api_data = await recup_data.json()
+        this.setState({
+            youtubeKey: api_data.results[0].key
+        })
+        }
+
+
+
+
+
+
     // On lui dit de charger d'abord, une api puis l'autre pour ne pas qu'il fasse tout en même temps 
     componentDidMount = async () => {
         await this.getInfo();
-        await this.getCrew();
+        await this.getKeyForYoutube();
+        this.getCrew();
+        this.getsimilar();
         this.getLaDate();
+        
     }
 
     render() {
         return (
             <div>
+                {/* <SideBar /> */}
 
                 <Affichagebis
                     imageFond={this.state.imageFond}
@@ -110,8 +144,17 @@ class FicheFilms extends Component {
                     </div>
                 </div>
                 <div className="test">
-                <SimilarMovie id={this.props.id}/></div>
-                {/* <TrailerApi id={this.pros.id}/> */}
+                {this.state.result.slice(0, 3).map((element,id) =>
+                <DisplaySimilar 
+                    key={id}
+                    affiche = {element.poster_path}
+                    titre = {element.title} />
+              )}
+                <TrailerView youtubeKey = {this.state.youtubeKey}/>
+                
+                
+                </div>
+                {/* <TrailerApi id={this.props.id}/> */}
 
             </div>
         )

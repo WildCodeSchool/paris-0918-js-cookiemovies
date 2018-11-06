@@ -15,10 +15,7 @@
     justify-content: space-around;
 } 
 .descriDateEtc{
-<<<<<<< HEAD
-=======
     font-family:'Quicksand';
->>>>>>> 2e19a8010939a50d6f14a5540ac8918de7485221
     display: flex;
     flex-direction: column;
     padding-left: 2em;
@@ -161,13 +158,8 @@
     flex-wrap: wrap;
     width: 6em; 
     text-align: center;
-<<<<<<< HEAD
-    margin: 1em; 
-    line-height: 1px;
-=======
     margin: 1em;
->>>>>>> 2e19a8010939a50d6f14a5540ac8918de7485221
-    border-radius: 50px;
+     border-radius: 50px;
     background-color: white;
 }
 /* ---------------- */

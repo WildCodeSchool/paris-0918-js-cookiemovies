@@ -6,5 +6,7 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const NOW_PLAYING = '/ensalle';
 export const UPCOMING ='/upcoming'
-export const SYNOP ='./synop'
+export const SYNOP ='/synop:id(\d+)'
+export const AVOIR ='/avoir'
+export const VU ='./vu'
 

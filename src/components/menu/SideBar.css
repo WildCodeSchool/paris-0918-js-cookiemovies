@@ -6,10 +6,9 @@
     left: 20px;
     top: 20px;
   }
-  body{
-background-color: black;
-  }
-  
+body{
+  background-color:black;
+}
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
     background: #976734;

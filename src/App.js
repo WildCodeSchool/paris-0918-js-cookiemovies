@@ -19,6 +19,7 @@ import SlidesInTheater from "./components//slides/SlidesInTheater";
 import SlidesNotOut from "./components//slides/SlidesNotOut";
 import SlidesOutOfTheater from "./components/slides/SlidesOutOfTheater";
 
+
 // import NowPlaying from "./components/NowPlaying";
 // import Upcoming from "./components/Upcoming";
 // import TrailerApi from "./components/TrailerApi";
