@@ -4,17 +4,14 @@ import Affichagebis from "./Affichagebis.js";
 import Acteurs from "./Acteurs.js";
 import AffichGenres from "./AffichGenres.js";
 import "./FicheFilms.css"
-
-import TrailerApi from "../trailer/TrailerApi";
-import SimilarMovie from "../similar/SimilarMovie";
 import DisplaySimilar from '../similar/DisplaySimilar'
 import TrailerView from '../trailer/TrailerView'
-// import SideBar from "../menu/SideBar.js";
+import SideBar from "../menu/SideBar.js";
 
 
 
 const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
-const movie = 550
+
 
 
 class FicheFilms extends Component {
@@ -113,7 +110,7 @@ class FicheFilms extends Component {
     render() {
         return (
             <div>
-                {/* <SideBar /> */}
+                <SideBar />
 
                 <Affichagebis
                     imageFond={this.state.imageFond}
@@ -142,7 +139,7 @@ class FicheFilms extends Component {
                                 photographie={element.profile_path} />
                         )}
                     </div>
-                </div>
+                </div> 
                 <div className="test">
                 {this.state.result.slice(0, 3).map((element,id) =>
                 <DisplaySimilar 
@@ -154,7 +151,6 @@ class FicheFilms extends Component {
                 
                 
                 </div>
-                {/* <TrailerApi id={this.props.id}/> */}
 
             </div>
         )

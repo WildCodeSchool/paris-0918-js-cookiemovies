@@ -41,7 +41,7 @@ class RouterPage extends React.Component {
         {/* <Background /> */}
       <Navigation authUser = {this.state.authUser} />
       <Switch>
-        <Route path="./accueil" component={Accueil} />
+        <Route path="/accueil" component={Accueil} />
         <Route path="/signup" component={SignUpPage} />
         <Route path='/signin' component={SignInPage}  />
         <Route path='/pw-forget' component={PasswordForgetPage} />
