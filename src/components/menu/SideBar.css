@@ -3,8 +3,8 @@
     position: fixed;
     width: 50px;
     height: 50px;
-    left: 36px;
-    top: 36px;
+    left: 20px;
+    top: 20px;
   }
   body{
 background-color: black;
@@ -60,15 +60,21 @@ background-color: black;
     margin-top: 30px;
   }
    
+
+
+
+
   .my-menu  .enSalle a{
     /*padding: 35px;*/
   }
   .my-menu .enSalle{
       display: flex;
       flex-direction: row;
-      margin-top: 80px;
   }
- 
+  .my-menu .accueil{
+    text-align: center;
+    margin-top: 80px;
+  }
 
 .my-menu .notif .cloche{
   width:20px;
@@ -91,18 +97,9 @@ background-color: black;
       margin-top: -1px;
        
   }
-  .my-menu .enSalle .borderCercle{
-    
-    width: 20px;
-    height: 20px;
-    background: rgb(155, 16, 173);
-    border-radius: 50%;
-    border:2px solid white;
-  
-  }
 
  .my-menu .sorti a{
-  padding: 24px;
+  /* padding: 24px; */
 }
 .my-menu img {
   width: 40px;
@@ -133,10 +130,3 @@ a {
     background: rgba(0, 0, 0, 0.3);
   }
 
-.ligne{
-  border-top: 0.5px solid white;
-  width: 100%;
-  margin-left: 3%;
-  margin-top: 50px;
-}
-  

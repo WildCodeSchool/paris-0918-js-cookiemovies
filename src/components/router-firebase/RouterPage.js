@@ -9,6 +9,10 @@ import PasswordForgetPage from '../password/PasswordForget';
 import AccountPage from '../folder/Account';
 import { firebase } from '../../firebase';
 import WithAuthentication from '../folder/WithAuthentication';
+import Ensalle from '../nowPlaying/NowPlaying'
+import Upcoming from '../upcoming/Upcoming'
+import Synop from '../synopfilm/FicheFilms'
+// import Background from '../background/Affiche'
 
 
 class RouterPage extends React.Component {
@@ -26,13 +30,13 @@ class RouterPage extends React.Component {
   }
 
   render() { 
-    console.log("routerpage",this.props.handleClick);
     
     return ( 
 
 
   
       <div>
+        {/* <Background /> */}
       <Navigation authUser = {this.state.authUser} />
       <Switch>
         <Route path="./accueil" component={Accueil} />
@@ -41,6 +45,9 @@ class RouterPage extends React.Component {
         <Route  path='/pw-forget' component={PasswordForgetPage} />
         <Route path='/home' component={Home}  />
         <Route path='/account' component={AccountPage} />
+        <Route path='/ensalle' component={Ensalle} />
+        <Route path='/upcoming' component={Upcoming} />
+        <Route parth='/synop' component={Synop} />
         </Switch>
 
        </div>

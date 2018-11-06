@@ -1,7 +1,6 @@
 import React from 'react'
-import '../css/UpcomingView.css';
-import ImageNull from '../images_slides/afficheNull.png'
-
+import './UpcomingView.css';
+import ImageNull from '../slides/imagesSlides/afficheNull.png'
 
 class UpcomingView extends React.Component{
     constructor(props) {

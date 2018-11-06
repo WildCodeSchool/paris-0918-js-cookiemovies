@@ -30,7 +30,7 @@ body{
     position: fixed;
     position : absolute;
     background-color: rgba(0, 0, 0, 0.4);
-    top :1480px;
+    top :1160px;
     right: 0px;
     z-index:40;
     opacity: 0; 
@@ -70,7 +70,7 @@ body{
 }
 .slides .boutonAjout{
     position : absolute;
-    top:20px;
+    top:-90px;
     right: 3px;
     width: 20px;
     height: 20px;
@@ -80,7 +80,7 @@ body{
 }
 .slides .boutonCloche{
     position : absolute;
-    top:38px;
+    top:-72px;
     right: 3px;
     width: 20px;
     height: 20px;
@@ -90,7 +90,7 @@ body{
 }
 .slides .boutonChecked{
     position : absolute;
-    top:56px;
+    top:-54px;
     right: 3px;
     width: 20px;
     height: 20px;

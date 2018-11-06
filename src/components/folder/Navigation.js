@@ -34,6 +34,7 @@ const Navigation = () =>
     <div className="linksbuttons">
     
     <ul className="links">
+    
      
       <li><NavLink to='/signin'> <Button size= "lg" color ="elegant" className="btncolor2">Se connecter</Button></NavLink></li>
     </ul>

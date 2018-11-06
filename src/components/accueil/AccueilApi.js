@@ -14,7 +14,6 @@ class AccueilApi extends React.Component{
       const recup_data = await fetch(`https://api.themoviedb.org/3/movie/now_playing?${api_key}&language=en-FR&page=1&region=FR&language=fr`)
       
       const api_data = await recup_data.json()
-      console.log('coco',api_data.results);
       
       
       this.setState({
