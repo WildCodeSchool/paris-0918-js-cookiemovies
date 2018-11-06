@@ -1,11 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import Navigation from '../folder/Navigation';
-import * as Routes from '../constants/Routes';
 import SignUpPage from '../folder/SignUp';
 import SignInPage from '../folder/SignIn';
+import Home from '../folder/Home'
+import Accueil from '../accueil/Home'
 import PasswordForgetPage from '../password/PasswordForget';
-import HomePage from '../folder/Home';
 import AccountPage from '../folder/Account';
 import { firebase } from '../../firebase';
 import WithAuthentication from '../folder/WithAuthentication';
@@ -13,12 +13,10 @@ import WithAuthentication from '../folder/WithAuthentication';
 
 class RouterPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       authUser: null,
     }
-  };
+
 
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
@@ -28,23 +26,25 @@ class RouterPage extends React.Component {
   }
 
   render() { 
-
+    console.log("routerpage",this.props.handleClick);
+    
     return ( 
 
 
-  <Router>
+  
       <div>
       <Navigation authUser = {this.state.authUser} />
-
-
-        <Route exact path={Routes.SIGN_UP} component={SignUpPage} />
-        <Route exact path={Routes.SIGN_IN} component={SignInPage} />
-        <Route exact path={Routes.PASSWORD_FORGET} component={PasswordForgetPage} />
-        <Route exact path={Routes.HOME} component={HomePage} />
-        <Route exact path={Routes.ACCOUNT} component={AccountPage} />
+      <Switch>
+        <Route path="./accueil" component={Accueil} />
+        <Route  path="/signup" component={SignUpPage} />
+        <Route path='/signin' component={SignInPage}  />
+        <Route  path='/pw-forget' component={PasswordForgetPage} />
+        <Route path='/home' component={Home}  />
+        <Route path='/account' component={AccountPage} />
+        </Switch>
 
        </div>
-    </Router>
+    
     );
   }
 } 

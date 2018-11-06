@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './index.css';
 import App from './App';
-import Home from './components/Routing/Routing'
+import RouterPage from './components/router-firebase/RouterPage'
 import * as serviceWorker from './serviceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
@@ -13,7 +13,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 ReactDOM.render(
 <Router>
-    <Home />
+    <RouterPage />
 </Router>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
