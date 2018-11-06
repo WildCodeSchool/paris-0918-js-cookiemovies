@@ -50,8 +50,8 @@ class RouterPage extends React.Component {
         <Route path='/ensalle' component={Ensalle} />
         <Route path='/upcoming' component={Upcoming} />
         <Route path='/synop:id(\d+)' component={Synop} />
-        <Route path='./avoir' component={Avoir}/>
-        <Route path='./vu' component={Vu}/>
+        <Route path='/avoir' component={Avoir}/>
+        <Route path='/vu' component={Vu}/>
         </Switch>
 
        </div>
