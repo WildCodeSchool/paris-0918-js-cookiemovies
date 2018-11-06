@@ -12,6 +12,8 @@ import WithAuthentication from '../folder/WithAuthentication';
 import Ensalle from '../nowPlaying/NowPlaying'
 import Upcoming from '../upcoming/Upcoming'
 import Synop from '../synopfilm/FicheFilms'
+import Avoir from '../profil/Avoir'
+import Vu from '../profil/DejaVu'
 // import Background from '../background/Affiche'
 
 
@@ -40,14 +42,16 @@ class RouterPage extends React.Component {
       <Navigation authUser = {this.state.authUser} />
       <Switch>
         <Route path="./accueil" component={Accueil} />
-        <Route  path="/signup" component={SignUpPage} />
+        <Route path="/signup" component={SignUpPage} />
         <Route path='/signin' component={SignInPage}  />
-        <Route  path='/pw-forget' component={PasswordForgetPage} />
+        <Route path='/pw-forget' component={PasswordForgetPage} />
         <Route path='/home' component={Home}  />
         <Route path='/account' component={AccountPage} />
         <Route path='/ensalle' component={Ensalle} />
         <Route path='/upcoming' component={Upcoming} />
-        <Route parth='/synop' component={Synop} />
+        <Route path='/synop:id(\d+)' component={Synop} />
+        <Route path='/avoir' component={Avoir}/>
+        <Route path='/vu' component={Vu}/>
         </Switch>
 
        </div>

@@ -5,6 +5,9 @@ import fleche_g from './imagesSlides/fleche_gauche_bl.png'
 import fleche_d from './imagesSlides/fleche_droite_bl.png'
 
 
+
+
+
 class  SlidesInTheater extends Component {
 
     state = {

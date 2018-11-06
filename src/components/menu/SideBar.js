@@ -20,14 +20,14 @@ class SideBar extends React.Component {
 
   render() {
    
-    document.addEventListener('DOMContentLoaded', function () {   
-      var open = document.getElementById('move');
-      console.log('logo',open);
-      open.onclick = function () {
-        document.getElementById('moveAll').scrollLeft += 400;
-    };
-      var prev = document.getElementById('prev');   
-  }, false);
+  //   document.addEventListener('DOMContentLoaded', function () {   
+  //     var open = document.getElementById('move');
+  //     console.log('logo',open);
+  //     open.onclick = function () {
+  //       document.getElementById('moveAll').scrollLeft += 400;
+  //   };
+  //     var prev = document.getElementById('prev');   
+  // }, false);
 
 
     return (
@@ -54,7 +54,7 @@ class SideBar extends React.Component {
 
         <div className="sorti">
           <img src={sorti} className="cookie_sorti" alt="" />
-          <NavLink to='/synop'><a className="menu-sorti" >Déja Sortis</a></NavLink>
+          <NavLink to='/synop'>Déja Sortis</NavLink>
         </div>
         
         <div className="ligne"></div>
@@ -64,7 +64,11 @@ class SideBar extends React.Component {
         </div>
         <div className="profile">
         <img src={avatar} className="logoAvatar" alt=""/>
-        <a onClick={this.showSettings} className="profile" href="">Profile</a>
+        <a onClick={this.showSettings} className="profile" href="">Profil</a>
+        <ul>
+        <NavLink to='/vu'><li>Mes films vu</li></NavLink>
+        <NavLink to='/avoir'><li>Mes films à voir</li></NavLink>
+        </ul>
         </div>
       </Menu>
       

@@ -178,6 +178,8 @@ body{
     position: absolute;
     bottom: 0px;
     padding: 4px;
+    font-size: 12px;
+
 
   }
   .slides .tile_details p {

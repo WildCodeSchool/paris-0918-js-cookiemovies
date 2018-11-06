@@ -11,7 +11,7 @@ class Page1 extends Component{
         return(
             <div>
                 <Sidebar />
-                {/* <HeaderPoster /> */}
+                <HeaderPoster />
                 
                 <Slide1 />
                 <Slide2 />
