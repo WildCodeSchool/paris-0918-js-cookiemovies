@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom';
 import SignOutButton from './SignOut';
 import * as Routes from '../constants/Routes';
 import AuthUserContext from './AuthUserContext';
-import './Navigation.css';
+
 import { Button } from 'mdbreact';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
+import './Navigation.css';
 import Accueil from '../accueil/Home'
 
 const Navigation = () =>

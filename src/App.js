@@ -49,7 +49,7 @@ class App extends Component {
       <Footer /> */}
 
         {/* <Header />*/}
-        <SlidesInTheater />
+        {/* <SlidesInTheater /> */}
         <SlidesNotOut />
         <SlidesOutOfTheater /> 
 
