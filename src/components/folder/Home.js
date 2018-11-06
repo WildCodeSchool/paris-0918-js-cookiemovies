@@ -1,11 +1,12 @@
 import React from 'react';
 import WithAuthorization from './WithAuthorization';
 import './Home.css';
+import Page1 from '../page1/Page1'
 
 
 const Home = () =>
   <div>
-    <h1 className="home"> Home </h1>
+    <Page1 />
     
    </div>
 

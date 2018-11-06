@@ -38,7 +38,7 @@ class  SlidesInTheater extends Component {
                 document.getElementById('contain').scrollLeft -= 400;
             };
         }, false);
-        
+             
 
    
    return(

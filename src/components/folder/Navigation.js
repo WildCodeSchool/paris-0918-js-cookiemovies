@@ -8,6 +8,7 @@ import { Button } from 'mdbreact';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
+import Accueil from '../accueil/Home'
 
 const Navigation = () =>
   <AuthUserContext.Consumer>
@@ -27,11 +28,18 @@ const Navigation = () =>
     </div> 
 
     const NavigationNonAuth = () =>
+    <div>
+      <Accueil />
+    
     <div className="linksbuttons">
-    <ul className="links"> 
-      <li><NavLink to={Routes.SIGN_IN}> <Button size= "lg" color ="elegant" className="btncolor2">Se connecter</Button></NavLink></li>
+    
+    <ul className="links">
+    
+     
+      <li><NavLink to='/signin'> <Button size= "lg" color ="elegant" className="btncolor2">Se connecter</Button></NavLink></li>
     </ul>
     </div> 
+    </div>
 
 
 

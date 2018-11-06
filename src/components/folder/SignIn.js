@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Routes from '../constants/Routes';
 import { Container, Row, Input, Button, Card, CardBody, ModalFooter } from 'mdbreact';
@@ -55,6 +55,8 @@ class SignInForm extends Component {
   }
 
   render() {
+    console.log("signIn",this.props.handleClick);
+    
     const {
       email,
       password,
@@ -87,16 +89,16 @@ class SignInForm extends Component {
                     </div>
                     <p className="font-small text-right d-flex justify-content-center mb-3 pt-2" color="rgba-black-strong"> Se connecter avec :</p>
                     <div> 
-                      <ul className="list-unstyled list-inline">
+                      {/* <ul className="list-unstyled list-inline">
                       <li className="list-inline-item"><a className="btn-floating btn-sm btn-fb" href="https://www.facebook.com/" target="blank"> <i className="fa fa-facebook-square"></i> </a></li>
                       <li className="list-inline-item"><a className="btn-floating btn-sm btn-fb" href="https://www.google.com/" target="blank"> <i className="fa fa-google"> </i> </a> </li>
                       <li className="list-inline-item"><a className="btn-floating btn-sm btn-tw" href="https://www.twitter.com/" target="blank"> <i className="fa fa-twitter-square"></i> </a></li>
-                      </ul>
+                      </ul> */}
                   </div>
                  </form> 
                 </CardBody>
                 <ModalFooter>
-                  <p className="font-small justify-content-end" color="rgba-black-strong" > Pas de compte ? <a href="http://localhost:3000/signup"> Inscrivez-vous</a></p>
+                  <p className="font-small justify-content-end" color="rgba-black-strong" > Pas de compte ? <Link to="/signup">Inscrivez-vous</Link></p>
                 </ModalFooter>
                 
                 </Card>

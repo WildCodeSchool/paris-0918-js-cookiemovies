@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route,Switch } from 'react-router-dom';
+
 
 import './Home.css'
 
@@ -6,19 +8,21 @@ import Top from "./Top";
 import Corps from "./Corps";
 import Bulle from '../logoBulle/Logobulle'
 import Footer from '../footer/Footer'
-import Background from '../background/Affiche'
 import Apiback from './AccueilApi'
 
 
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
-import 'mdbreact/dist/css/mdb.css';
+
+
 
 
 
 
 
 class App extends Component {
+  state={
+    register: true,
+  }
+  
   componentDidMount() {
     if (!localStorage.getItem("myMoviesList")) {
       localStorage.setItem("myMoviesList", JSON.stringify([]));
@@ -27,16 +31,22 @@ class App extends Component {
       localStorage.setItem("myMoviesAlert", JSON.stringify([]));
     }
   }
+  handleClick = () =>{
+    this.setState({
+      register: false,
+    })
+  }
 
   render() {
     return (
       <div className="body">
-      
+   
       <Top />
       <Apiback />
       <Corps />
       <Bulle />
       <Footer />
+      
       </div>
     );
   }

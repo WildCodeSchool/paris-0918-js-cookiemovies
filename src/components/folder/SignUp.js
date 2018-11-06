@@ -61,6 +61,8 @@ class SignUpForm extends Component {
   }
 
   render() {
+    console.log('signup page loaded');
+    
 
     const {
       username,
@@ -77,7 +79,7 @@ class SignUpForm extends Component {
     username === '';
 
     return (
-      <Container>
+      <Container className="inscription">
          <Row>
            <Col md="6">
             <Card className="cardsignup">
@@ -108,7 +110,7 @@ const SignUpLink = () =>
   <p>
     Pas de compte ?
     {' '}
-    <Link to={Routes.SIGN_UP}>Sign Up</Link>
+    <Link to="/signup">Sign Up</Link>
   </p>
 
 export default withRouter(SignUpPage);

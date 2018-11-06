@@ -1,18 +1,21 @@
 .inscription{
-  padding-top: 17%;
-padding-bottom: 3%;
-position: fixed;
-margin: auto;
+  position: absolute;
+  top: 0;
+  padding-top: 14%;
+  padding-bottom: 3%;
+  margin: 0 auto;
+  position: fixed;
+
 }
 .cardsignin {
   display: flex;
   opacity: 1;
-  margin-left: 120%;
+  margin-left: 100%;
+  margin-right: 100%;
   margin-top: 15px;
   margin-bottom: 110px;
   border-radius: 10px;
   width: 450px;
-
 }
 
 button {
