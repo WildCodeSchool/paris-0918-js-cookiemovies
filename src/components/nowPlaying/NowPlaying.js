@@ -1,5 +1,7 @@
 import React from 'react'
 import NowPlayingView from './NowPlayingView'
+import Sidebar from '../menu/SideBar'
+
 
 class NowPlaying extends React.Component{ 
     state = {
@@ -34,6 +36,7 @@ class NowPlaying extends React.Component{
     render(){
         return(
             <div className="NowPlaying">
+            <Sidebar />
             <div className="box">
             {this.state.results.map((element, id) => 
                     <NowPlayingView key={element.id} title = {element.title} 

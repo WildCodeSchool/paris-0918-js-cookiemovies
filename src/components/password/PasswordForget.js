@@ -6,7 +6,7 @@ import * as Routes from '../constants/Routes';
 import './PasswordForget.css'
 
 const PasswordForgetPage = () =>
-  <div>
+  <div className="forgetPass">
     <h1 className="titlePf">Réinitialisation du mot de passe</h1>
     <PasswordForgetForm />
   </div>
@@ -50,7 +50,7 @@ class PasswordForgetForm extends Component {
     const isInvalid = email === '';
 
     return (
-     <div>
+     <div  >
       <p className="mdp">Vous allez recevoir un mail afin de réinitialiser votre mot de passe.<br/>
       Merci d'entrer votre mail associée à votre compte</p>
       <form className="PasswordForget" onSubmit={this.onSubmit}>
@@ -73,7 +73,7 @@ class PasswordForgetForm extends Component {
 
 const PasswordForgetLink = () =>
   <p>
-    <Link to={Routes.PASSWORD_FORGET}>Mot de passe oublié ?</Link>
+    <Link to='/pw-forget'>Mot de passe oublié ?</Link>
   </p>
 
 export default PasswordForgetPage;
