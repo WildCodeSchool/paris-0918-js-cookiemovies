@@ -1,13 +1,28 @@
 
-.merde h1{
-    color: white;
+.Avoir .titreAvoir{
     text-align: center;
-    margin-top:180px
+    margin-top:100px;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Quicksand';
+    background: linear-gradient(to left, #ff22da, #1400ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.testSidBar{
+    position:absolute;
+    top:0;
+}
+
 .wrappeur h2{
+    height: 3.5em;
     color: white;
+    font-size: 1.5em;
     text-align: center; 
 }
+
 .wrappeur p{
     color: white;
     height: 100px;
@@ -21,14 +36,20 @@
     color: purple
 }
 .wrappeur{
-    margin:5px;
-    width: 350px;    
+    margin:15px;
+    width: 250px;  
 }
-.merde .ro{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    margin:5px;
-    width: 100%;
+.wrappeur img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.ro{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.wrappeur p {
+    text-align: justify;
 }
