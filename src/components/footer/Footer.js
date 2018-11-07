@@ -8,7 +8,7 @@ import 'mdbreact/dist/css/mdb.css';
 class FooterPage extends React.Component {
     render() {
         return (
-           <div className="fixed-bottom" >
+           <div className="foot" >
             <Footer color="elegant-color-dark" className="page-footer font-small pt-4 mt-4">
                 <Container fluid className="text-md-center">
                     <Row>
