@@ -46,7 +46,8 @@ class DejaVu extends Component{
         <div className="testSidBar" >
             <SideBar/>
             </div>
-            <h1>Ma liste de films à voir</h1>
+            <div  className="Avoir">
+            <h1 className="titreAvoir">Ma liste de films déjà vus</h1>
             <div className="ro" >
             {this.state.tableauFilms.map((element,id)=>
             <AffichageDejaVu
@@ -56,6 +57,7 @@ class DejaVu extends Component{
                 release={element.release_date}
                 description={element.overview}
             />)}
+            </div>
             </div>
         <Footer />
 

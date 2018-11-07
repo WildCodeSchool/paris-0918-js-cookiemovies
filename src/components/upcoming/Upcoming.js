@@ -38,6 +38,7 @@ class Upcoming extends React.Component{
         return(
             <div className="Upcoming">
             <Sidebar />
+            <h1>Prochainement en salle</h1>
             <div className="box">
             {this.state.results.map((element, id) => 
                     <UpcomingView key={element.id} title = {element.title} 
