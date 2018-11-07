@@ -19,18 +19,11 @@ class AffichageAvoir extends Component{
         const leBonMois = (month[mois-1])
         const newDate = (`${jour} ${leBonMois} ${annee}`)
 
-        // const tilteLength = () =>{
-        //     if(this.props.title.length > 25){
-        //        document.getElementById("taille").style.fontSize = "11px";
-        //     }
-        // }
-        // tilteLength()
-
     return(
         
         <div className="wrap" >
             <div className="wrappeur">
-                <h2 id="taille">{this.props.title}</h2>
+                <h2>{this.props.title}</h2>
                 <img className="" src={imageSrc} alt="affiche du film à voir" />
                 <p>{this.props.description}</p>
                 <h3>Sorti le {newDate}</h3>
