@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SideBar from '../menu/SideBar';
 import AffichageDejaVu from "./AffichageDejaVu";
 import "./Avoir.css";
+import Footer from '../footer/Footer'
+
 
 class DejaVu extends Component{
     state = {
@@ -40,9 +42,10 @@ class DejaVu extends Component{
     render(){
         
     return(
-        
-        <div className="merde" >
+        <div className="basFoot">
+        <div className="testSidBar" >
             <SideBar/>
+            </div>
             <h1>Ma liste de films à voir</h1>
             <div className="ro" >
             {this.state.tableauFilms.map((element,id)=>
@@ -54,7 +57,7 @@ class DejaVu extends Component{
                 description={element.overview}
             />)}
             </div>
-        
+        <Footer />
 
         </div>
     )

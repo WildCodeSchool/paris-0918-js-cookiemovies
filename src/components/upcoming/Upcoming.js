@@ -1,6 +1,7 @@
 import React from 'react'
 import UpcomingView from './UpcomingView'
 import Sidebar from '../menu/SideBar'
+import Footer from '../footer/Footer'
 
 
 class Upcoming extends React.Component{ 
@@ -57,6 +58,7 @@ class Upcoming extends React.Component{
                         description={element.overview}/>)
                     }      
                 </div>
+                <Footer />
             </div>
         )
     }

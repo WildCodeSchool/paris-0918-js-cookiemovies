@@ -1,6 +1,7 @@
 import React from 'react'
 import NowPlayingView from './NowPlayingView'
 import Sidebar from '../menu/SideBar'
+import Footer from '../footer/Footer'
 
 
 class NowPlaying extends React.Component{ 
@@ -57,6 +58,7 @@ class NowPlaying extends React.Component{
                         description={element.overview}/>)
                     }      
                 </div>
+                <Footer />
             </div>
         )
     }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SideBar from '../menu/SideBar';
 import AffichageAvoir from "./AffichageAvoir";
 import "./Avoir.css";
+import Footer from '../footer/Footer'
 
 class Avoir extends Component{
     state = {
@@ -41,7 +42,7 @@ class Avoir extends Component{
     render(){
         
     return(
-        <div>
+        <div className="basFoot">
             <div className="testSidBar">
                 <SideBar/>
             </div>
@@ -58,6 +59,7 @@ class Avoir extends Component{
                 />)}
                 </div>
             </div>
+            <Footer/>
         </div>
     )
     }

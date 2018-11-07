@@ -4,6 +4,7 @@ import Slide2 from '../slides/SlidesNotOut'
 import Slide3 from '../slides/SlidesOutOfTheater'
 import Sidebar from '../menu/SideBar'
 import HeaderPoster from '../header/Header'
+import Footer from '../footer/Footer'
 
 
 class Page1 extends Component{
@@ -16,6 +17,7 @@ class Page1 extends Component{
                 <Slide1 />
                 <Slide2 />
                 <Slide3 />
+                <Footer />
 
             </div>
         )

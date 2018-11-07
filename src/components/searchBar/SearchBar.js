@@ -4,6 +4,7 @@ import Suggestions from './Suggestions';
 import Affichage from './Affichage';
 import './SearchBar.css';
 import SideBar from '../menu/SideBar'
+import Footer from '../footer/Footer'
 
 class SearchBar extends Component {
     state = {
@@ -60,8 +61,10 @@ class SearchBar extends Component {
                     <Affichage
                         key={id}
                         title={element.title} 
-                        image={element.poster_path}/> 
+                        image={element.poster_path}
+                        id={element.id}/> 
                     )}
+                    <Footer />
           </div>
         )
       }

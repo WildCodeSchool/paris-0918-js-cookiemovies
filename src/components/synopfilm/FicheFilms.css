@@ -1,4 +1,6 @@
-
+.searchFooter{
+    margin-bottom: 200px;
+}
 /* LES TEXTES EN BLANCS */
 .descri, .titleTitre, .date, .descri, .real, .duree, .titreDuree{
     color: white;
