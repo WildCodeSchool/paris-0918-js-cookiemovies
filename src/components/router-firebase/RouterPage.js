@@ -14,6 +14,7 @@ import Upcoming from '../upcoming/Upcoming'
 import Synop from '../synopfilm/FicheFilms'
 import Avoir from '../profil/Avoir'
 import Vu from '../profil/DejaVu'
+import Search from '../searchBar/SearchBar'
 // import Background from '../background/Affiche'
 
 
@@ -52,6 +53,7 @@ class RouterPage extends React.Component {
         <Route path='/synop:id(\d+)' component={Synop} />
         <Route path='/avoir' component={Avoir}/>
         <Route path='/vu' component={Vu}/>
+        <Route path='/search' component={Search}/>
         </Switch>
 
        </div>

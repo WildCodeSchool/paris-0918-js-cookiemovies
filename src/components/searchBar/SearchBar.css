@@ -1,13 +1,15 @@
-body{
+.affichageSB body{
     background-color: black;
 } 
 
-input{
+.input input{
     color: white;
     background-color: black;
     height: 30px;
     border: 2px solid rgba(112, 112, 112, 0.5);
     border-radius: 20px;
+    display: block;
+    margin: 0 auto ;
 }
 
 ::placeholder{
@@ -47,7 +49,7 @@ input{
     text-decoration: none;
 }
 
-img {
+.affichageSB img {
     width: 160px;
     height: 250px;
     padding-left: 20px;
@@ -57,12 +59,12 @@ img {
 	transition: .3s ease-in-out;
 }
 
-img:hover{
+.affichageSB .img:hover{
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
 }
 
-h1{
+.affichageSB h1{
     color: white;
     font-size: 10px;
 }

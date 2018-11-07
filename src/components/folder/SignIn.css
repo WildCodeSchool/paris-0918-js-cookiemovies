@@ -28,7 +28,7 @@ button {
 }
 .btn.btn-elegant.btn-lg.Ripple-parent  {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top:0px;
   right: 60px;
   margin: 60px

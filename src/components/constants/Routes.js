@@ -9,4 +9,5 @@ export const UPCOMING ='/upcoming'
 export const SYNOP ='/synop:id(\d+)'
 export const AVOIR ='/avoir'
 export const VU ='/vu'
+export const SEARCH ='/search'
 

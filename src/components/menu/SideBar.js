@@ -54,7 +54,7 @@ class SideBar extends React.Component {
 
         <div className="sorti">
           <img src={sorti} className="cookie_sorti" alt="" />
-          <NavLink to='/synop'>Déja Sortis</NavLink>
+          <NavLink to='/search'>Recherche</NavLink>
         </div>
         
         <div className="ligne"></div>

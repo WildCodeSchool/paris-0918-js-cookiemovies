@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Suggestions from './Suggestions';
 import Affichage from './Affichage';
 import './SearchBar.css';
+import SideBar from '../menu/SideBar'
 
 class SearchBar extends Component {
     state = {
@@ -42,7 +43,9 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="input">
+            <SideBar />
+
                 <form onSubmit = {this.handleSubmit} >
                     <input
                         list="movieSuggest"
