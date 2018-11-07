@@ -39,28 +39,31 @@ class DejaVu extends Component{
 
     render(){
         
-    return(
-        
-        <div className="merde" >
-            <SideBar/>
-            <h1>Ma liste de films à voir</h1>
-            <div className="ro" >
-            {this.state.tableauFilms.map((element,id)=>
-            <AffichageDejaVu
-                key={id}
-                title={element.title}
-                image={element.poster_path}
-                release={element.release_date}
-                description={element.overview}
-            />)}
+        return(
+            <div>
+                <div className="testSidBar">
+                    <SideBar/>
+                </div>
+                <div className="Avoir" >
+                    <h1 className="titreAvoir">Ma liste de films déjà vu</h1>
+                    <div className="ro" >
+                    {this.state.tableauFilms.map((element,id)=>
+                    <AffichageDejaVu
+                        key={id}
+                        title={element.title}
+                        image={element.poster_path}
+                        release={element.release_date}
+                        description={element.overview}
+                    />)}
+                    </div>
+                </div>
             </div>
-        
-
-        </div>
-    )
+        )
+        }
     }
-}
 export default DejaVu
+
+
 
 
 
