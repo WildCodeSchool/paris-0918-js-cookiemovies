@@ -4,6 +4,7 @@ import Sidebar from '../menu/SideBar'
 import Footer from '../footer/Footer'
 
 
+
 class NowPlaying extends React.Component{ 
     state = {
         results :[],
@@ -36,10 +37,12 @@ class NowPlaying extends React.Component{
       }
     render(){
         return(
+            
             <div className="NowPlaying">
             <Sidebar />
             <h1>En salle</h1>
             <div className="box">
+
             {this.state.results.map((element, id) => 
                     <NowPlayingView key={element.id} title = {element.title} 
                         id={element.id}
