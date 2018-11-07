@@ -128,7 +128,7 @@ a {
 .profile1:hover .profile2{
   visibility: visible;
 }
-.menu-enSalle:hover, .menu-proch:hover, .menu-accueil:hover {
+.menu-enSalle:hover, .menu-proch:hover, .menu-accueil:hover, .profile1:hover, .sorti:hover, .profile2:hover {
 color: blueviolet !important;
 text-shadow: rgba(0, 0, 0, 0.445) 0.1em 0.1em 0.2em;
 }

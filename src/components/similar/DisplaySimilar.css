@@ -2,9 +2,8 @@
     background-color: black;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
-    /* display: inline-block; */
-     border: 1px solid white; 
+    padding: 10px;
+
 }
 .test{
     display: flex; 
@@ -15,8 +14,8 @@
 .affichageDS {
     color: white;
     word-break: break-all;
-    /* border: 1px solid white; */
     width: 10em;
+
 }
 
 .imageSimilar {

@@ -46,7 +46,7 @@ class SearchBar extends Component {
         return (
             <div className="input">
             <SideBar />
-
+                <h1 className="recherche">Recherche</h1>
                 <form onSubmit = {this.handleSubmit} >
                     <input
                         list="movieSuggest"
