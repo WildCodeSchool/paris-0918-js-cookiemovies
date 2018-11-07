@@ -15,7 +15,7 @@ class Top extends Component{
                 <img  className="fond" src={banniere} alt="" />
                
                 <img className="logo" src={logo} alt="" />
-                <h3 className="titre">CookieMoovies</h3>
+                <h3 className="titre">CookieMovies</h3>
 
 
               

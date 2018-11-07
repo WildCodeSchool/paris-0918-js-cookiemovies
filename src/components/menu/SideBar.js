@@ -33,7 +33,10 @@ class SideBar extends React.Component {
     return (
 
       <Menu id="sidebar" className={"my-menu"} customBurgerIcon={<img src={logo} />}>
-        <img src={logo} className="logo_cookie" alt="" />
+      
+        <div>
+          <img src={logo} className="logo_cookie" alt="" />
+        </div>
 
         < div className="accueil">
         <a id="about" className="menu-accueil" href="/Home">Accueil</a>
@@ -42,8 +45,6 @@ class SideBar extends React.Component {
         <div className="enSalle">
           <img src={salle} className="cookie_enSalle" alt="" />
           <NavLink to='/ensalle'><a id="home" className="menu-enSalle" >En Salle</a></NavLink>
-
-           
         </div>
         
 
@@ -54,7 +55,7 @@ class SideBar extends React.Component {
 
         <div className="sorti">
           <img src={sorti} className="cookie_sorti" alt="" />
-          <NavLink to='/search'>Recherche</NavLink>
+          <NavLink to='/search'className="sorti">Recherche</NavLink>
         </div>
         
         <div className="ligne"></div>
@@ -62,14 +63,15 @@ class SideBar extends React.Component {
        
         <p> <img src={cloche} className="cloche" alt="" />{this.props.count}</p>
         </div>
-        <div className="profile">
+        <div className="profile1">
         <img src={avatar} className="logoAvatar" alt=""/>
-        <a onClick={this.showSettings} className="profile" href="">Profil</a>
+        <a onClick={this.showSettings} className="profile1" href="">Profil</a>
         <ul>
-        <NavLink to='/vu'><li>Mes films vu</li></NavLink>
-        <NavLink to='/avoir'><li>Mes films à voir</li></NavLink>
+        <NavLink to='/vu'className="profile2"><li>Mes films vus</li></NavLink>
+        <NavLink to='/avoir'className="profile2"><li>Mes films à voir</li></NavLink>
         </ul>
         </div>
+       
       </Menu>
       
     );

@@ -84,7 +84,7 @@ class SignInForm extends Component {
                     <p className="font-small white-text d-flex justify-content-end"> <a href="http://localhost:3000/pw-forget" className="black-text ml-1"> Mot de passe oublié ?</a></p>
                     </div>
                     <div className="text-center mb-3">
-                    <Button className="connect" disabled={isInvalid} type="submit" color="red lighten-5"  >Se connecter</Button>
+                    <Button className="btn purple-gradient connect" disabled={isInvalid} type="submit" color="lighten-5"  >Se connecter</Button>
                     { error && <p>{error.message}</p> }
                     </div>
                  </form> 

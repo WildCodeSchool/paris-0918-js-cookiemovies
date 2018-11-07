@@ -90,10 +90,10 @@ class SignUpForm extends Component {
                       <Input value={username} onChange={event => this.setState(byPropKey('username', event.target.value))} label="Ton nom et prénom" icon="user" group type="text" validate error="wrong" success="right"/>
                       <Input value={email} onChange={event => this.setState(byPropKey('email', event.target.value))} label="Ton email" icon="envelope" group type="email" validate error="wrong" success="right"/>
                       <Input value={passwordOne} onChange={event => this.setState(byPropKey('passwordOne', event.target.value))} label="Ton mot de passe" icon="lock" group type="password" validate/>
-                      <Input value={passwordTwo} onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))} label="Confirmes ton mot de passe" icon="exclamation-triangle" group type="password" validate/>
+                      <Input value={passwordTwo} onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))} label="Confirme ton mot de passe" icon="exclamation-triangle" group type="password" validate/>
                     </div>
                     <div className="text-center py-4 mt-3">
-                      <Button disabled={isInvalid} color="red lighten-5" type="submit">S'inscrire</Button>
+                      <Button disabled={isInvalid} className="btn purple-gradient"color="red lighten-5" type="submit">S'inscrire</Button>
                     { error && <p>{error.message}</p> }
                     </div>
                   </form>

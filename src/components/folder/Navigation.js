@@ -36,7 +36,7 @@ const Navigation = () =>
     <ul className="links">
     
      
-      <li><NavLink to='/signin'> <Button size= "lg" color ="amber" className="btncolor2">Se connecter</Button></NavLink></li>
+      <li><NavLink to='/signin'> <Button size= "lg" color ="elegant" className="btncolor2 btn-deep-purple">Se connecter</Button></NavLink></li>
     </ul>
     </div> 
     </div>
