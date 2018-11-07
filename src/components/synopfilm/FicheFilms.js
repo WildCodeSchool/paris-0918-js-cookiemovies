@@ -7,6 +7,7 @@ import "./FicheFilms.css"
 import DisplaySimilar from '../similar/DisplaySimilar'
 import TrailerView from '../trailer/TrailerView'
 import SideBar from "../menu/SideBar.js";
+import Footer from '../footer/Footer'
 
 
 
@@ -109,7 +110,7 @@ class FicheFilms extends Component {
 
     render() {
         return (
-            <div>
+            <div className="searchFooter">
                 <SideBar />
 
                 <Affichagebis
@@ -150,8 +151,9 @@ class FicheFilms extends Component {
                 <TrailerView youtubeKey = {this.state.youtubeKey}/>
                 
                 
+                
                 </div>
-
+                <Footer />
             </div>
         )
     }

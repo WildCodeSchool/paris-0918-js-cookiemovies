@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SideBar from '../menu/SideBar';
 import AffichageDejaVu from "./AffichageDejaVu";
 import "./Avoir.css";
+import Footer from '../footer/Footer'
+
 
 class DejaVu extends Component{
     state = {
@@ -38,30 +40,30 @@ class DejaVu extends Component{
     }
 
     render(){
-        
-        return(
-            <div>
-                <div className="testSidBar">
-                    <SideBar/>
-                </div>
-                <div className="Avoir" >
-                    <h1 className="titreAvoir">Ma liste de films déjà vu</h1>
-                    <div className="ro" >
-                    {this.state.tableauFilms.map((element,id)=>
-                    <AffichageDejaVu
-                        key={id}
-                        title={element.title}
-                        image={element.poster_path}
-                        release={element.release_date}
-                        description={element.overview}
-                    />)}
-                    </div>
-                </div>
+ 
+    return(
+        <div className="basFoot">
+        <div className="testSidBar" >
+            <SideBar/>
             </div>
-        )
-        }
-    }
-export default DejaVu
+            <h1>Ma liste de films à voir</h1>
+            <div className="ro" >
+            {this.state.tableauFilms.map((element,id)=>
+            <AffichageDejaVu
+                key={id}
+                title={element.title}
+                image={element.poster_path}
+                release={element.release_date}
+                description={element.overview}
+            />)}
+            </div>
+        <Footer />
+
+        </div>
+    )
+  }
+}
+export default DejaVu;
 
 
 

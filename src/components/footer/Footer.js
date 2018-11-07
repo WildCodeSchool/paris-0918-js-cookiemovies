@@ -8,6 +8,7 @@ import 'mdbreact/dist/css/mdb.css';
 class FooterPage extends React.Component {
     render() {
         return (
+           <div className="fixed-bottom" >
             <Footer color="elegant-color-dark" className="page-footer font-small pt-4 mt-4">
                 <Container fluid className="text-md-center">
                     <Row>
@@ -34,7 +35,7 @@ class FooterPage extends React.Component {
                         <li className="list-inline-item">
                             <h5 className="mb-1">Abonnez-vous à notre Newletters :</h5>
                         </li>
-                        <li className="list-inline-item"><a href="#" className="btn btn-danger btn-rounded">Here!</a></li>
+                        <li className="list-inline-item"><a href="#" className="btn purple-gradient btn-sm btn-rounded ">Here!</a></li>
                     </ul>
                 </div>
                 <hr />
@@ -53,6 +54,9 @@ class FooterPage extends React.Component {
                     </Container>
                 </div>
             </Footer>
+            </div>
+            
+            
         );
     }
 }

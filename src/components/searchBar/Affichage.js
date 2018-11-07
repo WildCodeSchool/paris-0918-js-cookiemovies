@@ -2,6 +2,8 @@ import React , { Component } from 'react';
 
 import './SearchBar.css';
 import ImageNull from './test3.png';
+import { Link } from 'react-router-dom';
+
 
 
 class Affichage extends Component{
@@ -19,7 +21,9 @@ class Affichage extends Component{
          return(
            
             <div className="affichageSB">
-            <a className="lienSB" href="#" >
+        <Link to={`/synop${this.props.id}`}>
+
+            <a className="lienSB" href="" >
             <figure>
                 
                     <figcaption className="titleSB">{this.props.title}</figcaption>
@@ -27,6 +31,7 @@ class Affichage extends Component{
                 
             </figure>
             </a>
+            </Link>
             </div>
              
              

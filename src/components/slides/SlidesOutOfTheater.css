@@ -5,7 +5,10 @@ body{
 
 
 }
+.contain2{
+    margin-bottom: 200px;
 
+}
 .contain2 h2{
     padding-left: 50px;
     position: relative;

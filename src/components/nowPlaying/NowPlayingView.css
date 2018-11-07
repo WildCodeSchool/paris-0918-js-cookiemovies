@@ -3,7 +3,7 @@
     box-sizing: border-box;
 } */
 .NowPlaying{
-
+margin-bottom: 200px;
     background-color: black;
 }
 .NowPlaying .wrapper img{

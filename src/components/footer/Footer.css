@@ -1,7 +1,19 @@
-.text-md-center h5 {
 
+.text-center{
+    height: 20px;
+    
+    
+}
+.text-md-center{
+    height: 20px;
+}
+.text-md-center h5 {
+    
     font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.basDePage{
+    opacity: 0.5;
 }
 
 
