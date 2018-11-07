@@ -22,8 +22,7 @@ const Navigation = () =>
      const NavigationAuth = () =>
     <div className="linksbuttons">
     <ul>
-      <li><NavLink to={Routes.HOME}> <Button size= "lg" color ="elegant" className="btncolor">Accueil </Button></NavLink></li>
-      <li><NavLink to={Routes.ACCOUNT}> <Button size= "lg" color ="elegant" className="btncolor"> Compte </Button></NavLink></li>
+      {/* <li><NavLink to={Routes.ACCOUNT}> <Button size= "lg" color ="amber" className="btncolor"> Compte </Button></NavLink></li> */}
       <li> <SignOutButton /></li>
     </ul>
     </div> 
@@ -37,7 +36,7 @@ const Navigation = () =>
     <ul className="links">
     
      
-      <li><NavLink to='/signin'> <Button size= "lg" color ="elegant" className="btncolor2">Se connecter</Button></NavLink></li>
+      <li><NavLink to='/signin'> <Button size= "lg" color ="amber" className="btncolor2">Se connecter</Button></NavLink></li>
     </ul>
     </div> 
     </div>
