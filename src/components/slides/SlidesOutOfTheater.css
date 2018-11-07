@@ -80,8 +80,8 @@ body{
 }
 .slides .boutonAjout{
     position : absolute;
-    top:-90px;
-    right: 3px;
+    top:18px;
+    right: 1px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -90,8 +90,8 @@ body{
 }
 .slides .boutonCloche{
     position : absolute;
-    top:-72px;
-    right: 3px;
+    top:35px;
+    right: 1px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -100,8 +100,8 @@ body{
 }
 .slides .boutonChecked{
     position : absolute;
-    top:-54px;
-    right: 3px;
+    top:54px;
+    right: 1px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
