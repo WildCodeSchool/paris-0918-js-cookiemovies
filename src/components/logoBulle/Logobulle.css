@@ -1,0 +1,19 @@
+.logoStream{
+    background-color: black;
+}
+
+.logoStream {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 80px; 
+      
+}
+.bubbleStream{
+    margin: 5px;
+    height: 50px;
+    width: 55px;
+}
+
+a { text-decoration: none; color: #423D3C;  }

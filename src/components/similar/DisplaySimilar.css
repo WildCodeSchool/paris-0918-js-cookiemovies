@@ -1,0 +1,25 @@
+.containerDS {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* display: inline-block; */
+     border: 1px solid white; 
+}
+.test{
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+
+}
+.affichageDS {
+    color: white;
+    word-break: break-all;
+    /* border: 1px solid white; */
+    width: 10em;
+}
+
+.imageSimilar {
+    height: 15em;
+    width: 10em;
+}

@@ -1,0 +1,75 @@
+.inscription{
+  position: absolute;
+  top: 0;
+  padding-top: 14%;
+  padding-bottom: 3%;
+  margin: 0 auto;
+  position: fixed;
+}
+
+.cardsignin {
+  display: flex;
+  opacity: 1;
+  margin-left: 100%;
+  margin-right: 100%;
+  margin-top: 15px;
+  margin-bottom: 110px;
+  border-radius: 10px;
+  width: 450px;
+}
+
+.testButt{
+  color: rgba(94, 94, 94, 0.61);
+  font-size: 1em;
+  position: absolute;
+  z-index: 2;
+  top:100px;
+  left: 10px;
+  border-radius: 50px;
+  border: 2px solid rgba(94, 94, 94, 0.61);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  padding: 5px;
+  transition: 300ms;
+
+}
+.testButt:hover{
+  font-size: 1.1em;
+  transition: 300ms;
+  color: rgba(112,112,112, 1);
+  border: 2px solid rgb(146, 75, 226);
+  padding: 10px;
+  background: linear-gradient(to left, #ff65e5, #3f2aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardsignin .fa {
+    font-size: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 55px;
+    
+}
+
+
+.cardsignin .fa-facebook-square {
+  color : #3b5998;
+}
+
+.cardsignin .fa-google {
+  color: #db3236;
+}
+
+.cardsignin .fa-twitter {
+  color : #1dcaff;
+}
+
+.btn.btn-elegant.btn-lg.Ripple-parent{
+  z-index: 20;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+

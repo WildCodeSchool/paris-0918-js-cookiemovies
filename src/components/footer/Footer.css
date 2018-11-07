@@ -1,0 +1,71 @@
+
+.text-center{
+    height: 20px;
+    
+    
+}
+.text-md-center{
+    height: 20px;
+}
+.text-md-center h5 {
+    
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.basDePage{
+    opacity: 0.5;
+}
+
+
+.list-inline-item h5 {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list-inline-item a {
+
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+
+.list-inline-item:hover .fa-facebook {
+
+    background : #3b5998;
+    color: white;
+}
+
+.list-inline-item:hover .fa-twitter {
+
+    background : #1dcaff;
+    color: white;
+}
+
+
+.list-inline-item:hover .fa-google-plus {
+
+    background : #dd4b39;
+    color: white;
+}
+
+.list-inline-item:hover .fa-linkedin {
+
+    background : #0077B5;
+    color: white;
+}
+
+.list-inline-item:hover .fa-instagram {
+
+    background : linear-gradient(45deg,#405DE6,#5851DB,#833AB4, #C13584,#E1306C, #FD1D1D);
+    color: white;
+}
+
+
+.fa {
+    padding: 6px;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
