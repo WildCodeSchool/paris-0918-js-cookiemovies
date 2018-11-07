@@ -24,7 +24,6 @@ class Avoir extends Component{
         let recup_data = await fetch(`https://api.themoviedb.org/3/movie/${filmsDecoupes[i]}?api_key=${api_key}&language=fr-FR`)
         let api_data = await recup_data.json();
          await tab.push(api_data)
-        console.log(tab);
         
         
         this.setState({
@@ -32,30 +31,33 @@ class Avoir extends Component{
        }
        
     }
+    
 
-    componentDidMount(){
-        this.getMovieAlert()
+    componentDidMount= async () =>{
+         this.getMovieAlert()
+        // this.tilteLength()
     }
 
     render(){
         
     return(
-        
-        <div className="merde" >
-            <SideBar/>
-            <h1>Ma liste de films à voir</h1>
-            <div className="ro" >
-            {this.state.tableauFilms.map((element,id)=>
-            <AffichageAvoir
-                key={id}
-                title={element.title}
-                image={element.poster_path}
-                release={element.release_date}
-                description={element.overview}
-            />)}
+        <div>
+            <div className="testSidBar">
+                <SideBar/>
             </div>
-        
-
+            <div className="Avoir" >
+                <h1 className="titreAvoir">Ma liste de films à voir</h1>
+                <div className="ro" >
+                {this.state.tableauFilms.map((element,id)=>
+                <AffichageAvoir
+                    key={id}
+                    title={element.title}
+                    image={element.poster_path}
+                    release={element.release_date}
+                    description={element.overview}
+                />)}
+                </div>
+            </div>
         </div>
     )
     }
