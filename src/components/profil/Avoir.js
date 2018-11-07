@@ -10,6 +10,7 @@ class Avoir extends Component{
     
 
     getMovieAlert = async () => {
+        let tab =[]
         const api_key = "f43e81e7b5860bfeb6d036dd3dd602e1";
 
         const filmsDeMerde = localStorage.getItem("myMoviesAlert")
@@ -17,19 +18,18 @@ class Avoir extends Component{
         const filmsDecoupes = filmsALaCon.split(",")
         console.log(filmsDecoupes);
 
-        // filmsDecoupes.map(element=>{
-        //     console.log(element)
+   
         for(let i = 0 ; i < filmsDecoupes.length ; i++){
-
-        const recup_data = await fetch(`https://api.themoviedb.org/3/movie/${filmsDecoupes[i]}?api_key=${api_key}&language=fr-FR`)
-        const api_data = await recup_data.json();
-        console.log(api_data);
+        
+        let recup_data = await fetch(`https://api.themoviedb.org/3/movie/${filmsDecoupes[i]}?api_key=${api_key}&language=fr-FR`)
+        let api_data = await recup_data.json();
+         await tab.push(api_data)
+        console.log(tab);
         
         
         this.setState({
-            tableauFilms:api_data})
+            tableauFilms:tab})
        }
-       console.log(this.state.tableauFilms);
        
     }
 
@@ -38,19 +38,23 @@ class Avoir extends Component{
     }
 
     render(){
-        console.log(this.state.tableauFilms)
+        
     return(
         
         <div className="merde" >
             <SideBar/>
-            <h1>A voir</h1>
-
+            <h1>Ma liste de films à voir</h1>
+            <div className="ro" >
             {this.state.tableauFilms.map((element,id)=>
             <AffichageAvoir
                 key={id}
                 title={element.title}
+                image={element.poster_path}
+                release={element.release_date}
+                description={element.overview}
             />)}
-        }
+            </div>
+        
 
         </div>
     )
