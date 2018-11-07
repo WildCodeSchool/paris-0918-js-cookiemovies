@@ -18,22 +18,31 @@
   width: 450px;
 }
 
-button {
-
-  background-color: black;
-  opacity: 0.6;
-  color: white;
-  margin-top: 105px;
-
-}
-.btn.btn-elegant.btn-lg.Ripple-parent  {
+.testButt{
+  color: rgba(94, 94, 94, 0.61);
+  font-size: 1em;
   position: absolute;
   z-index: 2;
-  top:0px;
-  right: 60px;
-  margin: 60px
-  
-  
+  top:100px;
+  left: 10px;
+  border-radius: 50px;
+  border: 2px solid rgba(94, 94, 94, 0.61);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  padding: 5px;
+  transition: 300ms;
+
+}
+.testButt:hover{
+  font-size: 1.1em;
+  transition: 300ms;
+  color: rgba(112,112,112, 1);
+  border: 2px solid rgb(146, 75, 226);
+  padding: 10px;
+  background: linear-gradient(to left, #ff65e5, #3f2aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .cardsignin .fa {
