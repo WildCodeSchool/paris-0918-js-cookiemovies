@@ -141,17 +141,15 @@ class FicheFilms extends Component {
                         )}
                     </div>
                 </div> 
-                <div className="test">
+                <div className="containerTrailerDS">
+                <TrailerView youtubeKey = {this.state.youtubeKey}/>
+<div className="nope">
                 {this.state.result.slice(0, 3).map((element,id) =>
                 <DisplaySimilar 
                     key={id}
                     affiche = {element.poster_path}
                     titre = {element.title} />
-              )}
-                <TrailerView youtubeKey = {this.state.youtubeKey}/>
-                
-                
-                
+              )}</div>
                 </div>
                 <Footer />
             </div>
