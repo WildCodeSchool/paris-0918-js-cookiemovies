@@ -5,8 +5,8 @@
   padding-bottom: 3%;
   margin: 0 auto;
   position: fixed;
-
 }
+
 .cardsignin {
   display: flex;
   opacity: 1;
@@ -64,5 +64,12 @@
 
 .cardsignin .fa-twitter {
   color : #1dcaff;
+}
+
+.btn.btn-elegant.btn-lg.Ripple-parent{
+  z-index: 20;
+  position: absolute;
+  top: 40px;
+  right: 60px;
 }
 
