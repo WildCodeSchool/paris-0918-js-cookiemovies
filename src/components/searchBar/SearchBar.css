@@ -6,14 +6,15 @@
     color: white;
     background-color: black;
     height: 30px;
-    border: 2px solid rgba(112, 112, 112, 0.5);
+    border: 2px solid rgb(131, 37, 240);
     border-radius: 20px;
     display: block;
     margin: 0 auto ;
+    margin-bottom: 100px;
 }
 
 ::placeholder{
-    color: rgba(112, 112, 112, 0.5);
+    color: rgb(128, 20, 216);
 }
 
 /* container de la search bar */
@@ -67,4 +68,15 @@
 .affichageSB h1{
     color: white;
     font-size: 10px;
+}
+
+.recherche{
+    text-align: center;
+margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Quicksand';
+    background: linear-gradient(to left, #ff22da, #1400ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

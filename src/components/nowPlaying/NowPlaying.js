@@ -40,6 +40,7 @@ class NowPlaying extends React.Component{
             
             <div className="NowPlaying">
             <Sidebar />
+            <h1>En salle</h1>
             <div className="box">
 
             {this.state.results.map((element, id) => 

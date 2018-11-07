@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
+import './Merdeux.css'
+
 class TrailerView extends Component {
     _onReady(event) {
         // access to player in all event handlers via event.target
@@ -12,6 +14,7 @@ class TrailerView extends Component {
         const opts = {
             height: '390',
             width: '640',
+            margin: '70',
             playerVars: { // https://developers.google.com/youtube/player_parameters
               autoplay: 0
             }
@@ -20,7 +23,7 @@ class TrailerView extends Component {
 
         
         return(
-            <div>
+            <div className="merdeux">
                 <YouTube
                     videoId={this.props.youtubeKey}
                     opts={opts}

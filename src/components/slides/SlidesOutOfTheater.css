@@ -13,7 +13,14 @@ body{
     padding-left: 50px;
     position: relative;
     top: 60px;
-
+    font-family: 'Quicksand';
+    padding-left: 50px;
+    position: relative;
+    top: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff65e5 0%, #3f2aff 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contain2 .gauche_2{

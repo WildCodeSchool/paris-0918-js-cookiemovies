@@ -1,91 +1,5 @@
-/* .nowPlay .ajout{
-    position: relative;
-    top:10px;
-    width: 10%;
-    z-index: 10;
-}
-.nowPlay .cloche{
-    position : absolute;
-    top:38px;
-    right: 3px;
-    width:10%;
-}
-.nowPlay .cloche_coul{
-    position : absolute;
-    top:38px;
-    right: 3px;
-    width:10%;
-}
-.nowPlay .check{
-    position : absolute;
-    top:56px;
-    right: 3px;
-    width:10%;
-}
-.nowPlay .check_coul{
-    position : absolute;
-    top:56px;
-    right: 3px;
-    width:10%;
-}
-.nowPlay .boutonAjout{
-    position : absolute;
-    top: 18px;
-    right: 1px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    z-index: 20;
-    opacity:0;
-}
-.nowPlay .boutonCloche{
-    position : absolute;
-    top:35px;
-    right: 1px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity:0;
-    z-index: 20;    
-}
-.nowPlay .boutonChecked{
-    position : absolute;
-    top:54px;
-    right: 1px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity:0;
-    z-index: 20;
-} */
-/* .nowPlay figure.off .cloche{
-     visibility: hidden;
-}
-
-.nowPlay figure.off .check{
-    visibility: hidden;
-}
-.nowPlay figure.on .cloche_coul{
-    visibility: hidden;
-}
-.nowPlay figure.on .check_coul{
-    visibility: hidden;
-}
-
-.nowPlay figure.yellow .cloche_coul {
-    visibility: hidden;
-}
-.nowPlay figure.checked .check_coul {
-    visibility: hidden;
-} */
-
-
-
-
-
 
 .NowPlaying{
-margin-bottom: 200px;
     background-color: black;
 }
 .NowPlaying .wrapper img{
@@ -107,4 +21,16 @@ margin-bottom: 200px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 5px; 
+}
+
+.NowPlaying h1{
+    text-align: center;
+
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Quicksand';
+    background: linear-gradient(to left, #ff22da, #1400ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

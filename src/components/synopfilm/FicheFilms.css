@@ -1,6 +1,4 @@
-.searchFooter{
-    margin-bottom: 200px;
-}
+
 /* LES TEXTES EN BLANCS */
 .descri, .titleTitre, .date, .descri, .real, .duree, .titreDuree{
     color: white;
@@ -156,6 +154,7 @@
 /* ---- AFFICHGENRES.JS ---- */
 
 .genres{
+    color: black;
     height: 2em;
     flex-wrap: wrap;
     width: 6em; 
@@ -165,3 +164,16 @@
     background-color: white;
 }
 /* ---------------- */
+
+.containerTrailerDS{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.nope{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -6,25 +6,7 @@
     left: 20px;
     top: 20px;
   }
-body{
-  background-color:black;
-}
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #976734;
-     }
-  
-  /* Position and sizing of clickable cross button
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  /* .bm-cross {
-    background: #412c14; */
-  
-  
+
   /* General sidebar styles */
   .bm-menu {
     /* background: #976734; */
@@ -129,3 +111,24 @@ a {
     background: rgba(0, 0, 0, 0.3);
   }
 
+
+  .menu-proch, .menu-enSalle, .menu-accueil, .profile1, .sorti, .profile2{
+  font-family: 'Quicksand';
+  transition: 300ms;
+  color: white !important;
+    
+}
+.merde{
+
+}
+.profile2{
+  visibility: hidden;
+  font-size: 0.75em;
+}
+.profile1:hover .profile2{
+  visibility: visible;
+}
+.menu-enSalle:hover, .menu-proch:hover, .menu-accueil:hover, .profile1:hover, .sorti:hover, .profile2:hover {
+color: blueviolet !important;
+text-shadow: rgba(0, 0, 0, 0.445) 0.1em 0.1em 0.2em;
+}
