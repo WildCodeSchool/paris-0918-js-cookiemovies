@@ -40,7 +40,7 @@ class DejaVu extends Component{
     }
 
     render(){
-        
+ 
     return(
         <div className="basFoot">
         <div className="testSidBar" >
@@ -61,9 +61,11 @@ class DejaVu extends Component{
 
         </div>
     )
-    }
+  }
 }
-export default DejaVu
+export default DejaVu;
+
+
 
 
 

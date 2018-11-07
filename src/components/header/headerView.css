@@ -15,7 +15,8 @@
     position: relative;
     left:300px;
     top:100px;
-    z-index: 20000;
+    z-index: 3;
+    color: white;
   
 }
 

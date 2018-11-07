@@ -87,14 +87,6 @@ class SignInForm extends Component {
                     <Button className="connect" disabled={isInvalid} type="submit" color="red lighten-5"  >Se connecter</Button>
                     { error && <p>{error.message}</p> }
                     </div>
-                    <p className="font-small text-right d-flex justify-content-center mb-3 pt-2" color="rgba-black-strong"> Se connecter avec :</p>
-                    <div> 
-                      {/* <ul className="list-unstyled list-inline">
-                      <li className="list-inline-item"><a className="btn-floating btn-sm btn-fb" href="https://www.facebook.com/" target="blank"> <i className="fa fa-facebook-square"></i> </a></li>
-                      <li className="list-inline-item"><a className="btn-floating btn-sm btn-fb" href="https://www.google.com/" target="blank"> <i className="fa fa-google"> </i> </a> </li>
-                      <li className="list-inline-item"><a className="btn-floating btn-sm btn-tw" href="https://www.twitter.com/" target="blank"> <i className="fa fa-twitter-square"></i> </a></li>
-                      </ul> */}
-                  </div>
                  </form> 
                 </CardBody>
                 <ModalFooter>
